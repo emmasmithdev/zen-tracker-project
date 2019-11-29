@@ -26,4 +26,21 @@ class Continent
     continents.map { |continent| Continent.new(continent)}
   end
 
+  def self.delete_all
+    sql = "DELETE FROM continents"
+    SqlRunner.run(sql)
+  end
+
+  def self.sort_ascending
+    sql = "SELECT*FROM continents ORDER BY size ASC"
+    continents = SqlRunner.run(sql)
+    continents.map { |continent| Continent.new(continent)}
+  end
+
+  def self.sort_descending
+    sql = "SELECT*FROM continents ORDER BY size DESC"
+    continents = SqlRunner.run(sql)
+    continents.map { |continent| Continent.new(continent)}
+  end
+
 end

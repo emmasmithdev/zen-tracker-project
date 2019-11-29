@@ -6,6 +6,8 @@ require_relative('../models/yoga_experience.rb')
 require_relative('../models/attraction.rb')
 require('pry')
 
+Continent.delete_all
+
 @continent1 = Continent.new({"id" => 1,"name" => "Asia", "visited" => "f", "size" => 45000000})
 @continent2 = Continent.new({"id" => 2,"name" => "Africa", "visited" => "f", "size" => 30000000})
 @continent3 = Continent.new({"id" => 3,"name" => "North America", "visited" => "f", "size" => 25000000})
