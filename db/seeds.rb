@@ -24,5 +24,13 @@ Continent.delete_all
 @continent6.save
 @continent7.save
 
+@country1 = Country.new({"id" => 1, "name" => "Thailand", "visited" => "f", "continent_id" => @continent1.id})
+@country2 = Country.new({"id" => 2, "name" => "India", "visited" => "f", "continent_id" => @continent1.id})
+@country3 = Country.new({"id" => 3, "name" => "Cambodia", "visited" => "f", "continent_id" => @continent1.id})
+
+@country1.save
+@country2.save
+@country3.save
+
 binding.pry
 nil

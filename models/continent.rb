@@ -63,4 +63,11 @@ class Continent
     SqlRunner.run(sql, values)
   end
 
+  def self.countries
+    sql = "SELECT*FROM countries WHERE continent_id = $1"
+    values = [@id]
+    countries = SqlRunner.run(sql, values)
+    countries.map { |country| Country.new(country)}
+  end
+
 end
