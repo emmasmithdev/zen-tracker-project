@@ -68,4 +68,11 @@ class Country
     cities.map { |city| City.new(city)}
   end
 
+  def self.find(id)
+    sql = 'SELECT*FROM countries WHERE id = $1'
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Country.new(results[0])
+  end
+
 end
