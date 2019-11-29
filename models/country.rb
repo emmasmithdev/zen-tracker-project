@@ -45,6 +45,13 @@ class Country
     countries.map { |country| Country.new(country)}
   end
 
+  def continent
+    sql = "SELECT*FROM continents WHERE id = $1"
+    values = [@continent_id]
+    result = SqlRunner.run(sql, values)
+    return Continent.new(result[0])
+  end
+
   def update_visited
     sql = "UPDATE countries set visited = $1 WHERE id = $2"
     values = [@visited, @id]
