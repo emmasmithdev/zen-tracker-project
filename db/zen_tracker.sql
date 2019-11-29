@@ -41,7 +41,8 @@ CREATE TABLE yoga_experiences(
   city_id INT REFERENCES cities(id) ON DELETE CASCADE,
   yoga_id INT REFERENCES yogas(id) ON DELETE CASCADE,
   description TEXT,
-  bucket_list BOOLEAN
+  bucket_list BOOLEAN,
+  visited BOOLEAN
 );
 
 CREATE TABLE attractions(

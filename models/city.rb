@@ -88,8 +88,8 @@ class City
 
   end
 
-  def attractions
-
-  end 
+  # def attractions
+  #
+  # end
 
 end
