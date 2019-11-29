@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('city.rb')
 
 class Yoga
 
@@ -43,6 +44,10 @@ class Yoga
     sql = "UPDATE yogas SET practises = $1 WHERE id = $2"
     values = [@practises, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def cities
+    #list all cities where you can do this type of yoga
   end
 
 end

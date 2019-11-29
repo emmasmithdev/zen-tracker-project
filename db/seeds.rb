@@ -59,5 +59,18 @@ yoga2.save
 yoga3.save
 yoga4.save
 
+yoga_experience1 = YogaExperience.new({"studio_name" => "Absolute Yoga", "city_id" => city1.id, "yoga_id" => yoga2.id, "description" => "Absolute Yoga is Thailand's largest yoga centre that also specialises in
+  Pilates reformer and core blast programs. Having been Thailand's first hot yoga studio since 2002, Absolute Yoga is a pioneer in the yoga community in Southeast Asia with 7 studios throughout Bangkok.",
+  "bucket_list" => "f"})
+yoga_experience2 = YogaExperience.new({"studio_name" => "Shambhavi Yoga Studio", "city_id" => city2.id, "yoga_id" => yoga1.id, "description" => "When you combine ancient yoga traditions with breathing, moving and meditation,
+  it brings a new awareness and awakens you to a deeper connection to yourself and others. In every class you will experience strength, flexibility, and endurance training.", "bucket_list" => "f"})
+yoga_experience3 = YogaExperience.new({"studio_name" => "Meira's Ashtanga Yoga", "city_id" => city3.id, "yoga_id" => yoga3.id, "description" => "Ashtanga based flow classes focus on moving with the fluidity of the breath,
+  bringing together a combination of strength, flexibility and balance. I try to incorporate a wide range of modifications to my classes, creating an environment that is suitable for all levels of yoga practitioners.",
+  "bucket_list" => "f"})
+
+yoga_experience1.save
+yoga_experience2.save
+yoga_experience3.save
+
 binding.pry
 nil

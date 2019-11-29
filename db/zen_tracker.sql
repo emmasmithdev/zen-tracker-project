@@ -40,7 +40,8 @@ CREATE TABLE yoga_experiences(
   studio_name VARCHAR,
   city_id INT REFERENCES cities(id) ON DELETE CASCADE,
   yoga_id INT REFERENCES yogas(id) ON DELETE CASCADE,
-  review TEXT
+  description TEXT,
+  bucket_list BOOLEAN
 );
 
 CREATE TABLE attractions(
@@ -48,5 +49,6 @@ CREATE TABLE attractions(
   name VARCHAR,
   visited BOOLEAN,
   city_id INT REFERENCES cities(id) ON DELETE CASCADE,
-  rating INT
+  rating INT,
+  bucket_list BOOLEAN
 );
