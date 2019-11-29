@@ -26,4 +26,9 @@ class Country
     countries.map { |country| Country.new(country)}
   end
 
+  def self.delete_all
+    sql = "DELETE FROM countries"
+    SqlRunner.run(sql)
+  end
+
 end
