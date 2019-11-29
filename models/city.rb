@@ -57,7 +57,31 @@ class City
 
   def continent
     country = self.country
-    country.continent 
+    country.continent
+  end
+
+  def self.find(id)
+    sql = "SELECT*FROM cities WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return City.new(result[0])
+  end
+
+  def update_visited
+    @visited = "t"
+    sql = "UPDATE cities SET visited = $1 WHERE id = $2"
+    values = [@visited, @id]
+    SqlRunner.run(sql, values)
+    country = self.country
+    country.update_visited
+    continent = self.continent
+    continent.update_visited
+  end
+
+  def self.sort_by_distance
+    sql = "SELECT*FROM cities ORDER BY distance ASC"
+    cities = SqlRunner.run(sql)
+    cities.map { |city| City.new(city)}
   end
 
 end

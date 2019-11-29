@@ -54,7 +54,7 @@ class Country
 
   def update_visited
     @visited = "t"
-    sql = "UPDATE countries set visited = $1 WHERE id = $2"
+    sql = "UPDATE countries SET visited = $1 WHERE id = $2"
     values = [@visited, @id]
     SqlRunner.run(sql, values)
     continent = self.continent
