@@ -20,4 +20,10 @@ class Country
     @id = result[0]["id"].to_i
   end
 
+  def self.all
+    sql = "SELECT*FROM countries"
+    countries = SqlRunner.run(sql)
+    countries.map { |country| Country.new(country)}
+  end
+
 end

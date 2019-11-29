@@ -71,4 +71,8 @@ class Continent
     countries.map { |country| Country.new(country)}
   end
 
+  def cities
+    countries = self.countries
+  end
+
 end
