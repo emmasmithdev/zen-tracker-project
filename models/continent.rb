@@ -81,6 +81,8 @@ class Continent
 
   def cities
     countries = self.countries
+    cities = countries.map { |country| country.cities }
+    cities.flatten
   end
 
 end
