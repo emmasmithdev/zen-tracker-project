@@ -4,6 +4,7 @@ require_relative('../models/city.rb')
 require_relative('../models/yoga.rb')
 require_relative('../models/yoga_experience.rb')
 require_relative('../models/attraction.rb')
+require('pry')
 
 @continent1 = Continent.new({"id" => 1,"name" => "Asia", "visited" => "f", "size" => 45000000})
 @continent2 = Continent.new({"id" => 2,"name" => "Africa", "visited" => "f", "size" => 30000000})
@@ -20,3 +21,6 @@ require_relative('../models/attraction.rb')
 @continent5.save
 @continent6.save
 @continent7.save
+
+binding.pry
+nil
