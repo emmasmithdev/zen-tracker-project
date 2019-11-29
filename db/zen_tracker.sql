@@ -31,7 +31,8 @@ CREATE TABLE cities(
 CREATE TABLE yogas(
   id SERIAL PRIMARY KEY,
   type VARCHAR,
-  description TEXT
+  description TEXT,
+  practises INT
 );
 
 CREATE TABLE yoga_experiences(

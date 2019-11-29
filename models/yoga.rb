@@ -3,11 +3,13 @@ require_relative('../db/sql_runner')
 class Yoga
 
   attr_reader :id, :type, :description
+  attr_accessor :practises
 
   def initialize(options)
     @id = options["id"] if options["id"]
     @type = options["type"]
     @description = options["description"]
+    @practises = 0
   end
 
   def save
@@ -34,6 +36,13 @@ class Yoga
     values = [id]
     result = SqlRunner.run(sql, values)
     return Yoga.new(result[0])
+  end
+
+  def update_practises
+    @practises += 1
+    sql = "UPDATE yogas SET practises = $1 WHERE id = $2"
+    values = [@practises, @id]
+    SqlRunner.run(sql, values)
   end
 
 end
