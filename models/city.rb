@@ -55,4 +55,9 @@ class City
     return Country.new(result[0])
   end
 
+  def continent
+    country = self.country
+    country.continent 
+  end
+
 end
