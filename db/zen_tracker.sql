@@ -24,7 +24,8 @@ CREATE TABLE cities(
   name VARCHAR,
   visited BOOLEAN,
   country_id INT REFERENCES countries(id) ON DELETE CASCADE,
-  map_url VARCHAR
+  map_url VARCHAR,
+  distance INT
 );
 
 CREATE TABLE yogas(

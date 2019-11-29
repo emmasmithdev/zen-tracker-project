@@ -31,4 +31,18 @@ class Country
     SqlRunner.run(sql)
   end
 
+  def self.visited
+    sql = 'SELECT*FROM countries WHERE visited = $1'
+    values = ["t"]
+    countries = SqlRunner.run(sql, values)
+    countries.map { |country| Country.new(country)}
+  end
+
+  def self.not_visited
+    sql = 'SELECT*FROM countries WHERE visited = $1'
+    values = ["f"]
+    countries = SqlRunner.run(sql, values)
+    countries.map { |country| Country.new(country)}
+  end
+
 end
