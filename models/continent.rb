@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('country.rb')
 
 class Continent
 
@@ -63,7 +64,7 @@ class Continent
     SqlRunner.run(sql, values)
   end
 
-  def self.countries
+  def countries
     sql = "SELECT*FROM countries WHERE continent_id = $1"
     values = [@id]
     countries = SqlRunner.run(sql, values)

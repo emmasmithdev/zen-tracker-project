@@ -16,14 +16,14 @@ CREATE TABLE countries(
   id SERIAL PRIMARY KEY,
   name VARCHAR,
   visited BOOLEAN,
-  continent_id INT REFERENCES continents(id)
+  continent_id INT REFERENCES continents(id) ON DELETE CASCADE
 );
 
 CREATE TABLE cities(
   id SERIAL PRIMARY KEY,
   name VARCHAR,
   visited BOOLEAN,
-  country_id INT REFERENCES countries(id),
+  country_id INT REFERENCES countries(id) ON DELETE CASCADE,
   map_url VARCHAR
 );
 
@@ -36,8 +36,8 @@ CREATE TABLE yogas(
 CREATE TABLE yoga_experiences(
   id SERIAL PRIMARY KEY,
   studio_name VARCHAR,
-  city_id INT REFERENCES cities(id),
-  yoga_id INT REFERENCES yogas(id),
+  city_id INT REFERENCES cities(id) ON DELETE CASCADE,
+  yoga_id INT REFERENCES yogas(id) ON DELETE CASCADE,
   review TEXT
 );
 
@@ -45,6 +45,6 @@ CREATE TABLE attractions(
   id SERIAL PRIMARY KEY,
   name VARCHAR,
   visited BOOLEAN,
-  city_id INT REFERENCES cities(id),
+  city_id INT REFERENCES cities(id) ON DELETE CASCADE,
   rating INT
 );
