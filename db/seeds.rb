@@ -6,6 +6,7 @@ require_relative('../models/yoga_experience.rb')
 require_relative('../models/attraction.rb')
 require('pry')
 
+City.delete_all
 Country.delete_all
 Continent.delete_all
 

@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('country.rb')
 
 class City
 
@@ -22,5 +23,36 @@ class City
     @id = result[0]["id"].to_i
   end
 
+  def self.delete_all
+    sql = "DELETE FROM cities"
+    SqlRunner.run(sql)
+  end
+
+  def self.all
+    sql = "SELECT*FROM cities"
+    cities = SqlRunner.run(sql)
+    cities.map { |city| City.new(city)}
+  end
+
+  def self.visited
+    sql = 'SELECT*FROM cities WHERE visited = $1'
+    values = ["t"]
+    countries = SqlRunner.run(sql, values)
+    countries.map { |city| City.new(city)}
+  end
+
+  def self.not_visited
+    sql = 'SELECT*FROM cities WHERE visited = $1'
+    values = ["f"]
+    countries = SqlRunner.run(sql, values)
+    countries.map { |city| City.new(city)}
+  end
+
+  def country
+    sql = "SELECT*FROM countries WHERE id = $1"
+    values = [@country_id]
+    result = SqlRunner.run(sql, values)
+    return Country.new(result[0])
+  end
 
 end
