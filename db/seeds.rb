@@ -9,6 +9,7 @@ require('pry')
 City.delete_all
 Country.delete_all
 Continent.delete_all
+Yoga.delete_all
 
 continent1 = Continent.new({"name" => "Asia", "visited" => "f", "size" => 45000000})
 continent2 = Continent.new({"name" => "Africa", "visited" => "f", "size" => 30000000})
@@ -56,7 +57,7 @@ yoga4 = Yoga.new({"type" => "Vinyasa", "description" => "Vinyasa is a Sanskrit w
 yoga1.save
 yoga2.save
 yoga3.save
-yoga4.save 
+yoga4.save
 
 binding.pry
 nil
