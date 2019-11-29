@@ -71,6 +71,13 @@ class Continent
     countries.map { |country| Country.new(country)}
   end
 
+  def self.find(id)
+    sql = 'SELECT*FROM continents WHERE id = $1'
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Continent.new(results[0])
+  end
+
   def cities
     countries = self.countries
   end

@@ -45,4 +45,10 @@ class Country
     countries.map { |country| Country.new(country)}
   end
 
+  def update_visited
+    sql = "UPDATE countries set visited = $1 WHERE id = $2"
+    values = [@visited, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
