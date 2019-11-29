@@ -61,4 +61,11 @@ class Country
     continent.update_visited
   end
 
+  def cities
+    sql = "SELECT*FROM cities WHERE country_id = $1"
+    values = [@id]
+    cities = SqlRunner.run(sql, values)
+    cities.map { |city| City.new(city)}
+  end
+
 end
