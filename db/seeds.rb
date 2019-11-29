@@ -42,5 +42,21 @@ city1.save
 city2.save
 city3.save
 
+yoga1 = Yoga.new({"type" => "Hatha", "description" => "Hatha yoga is a generic term that refers to any type of yoga that teaches physical postures.
+  When a class is marketed as Hatha, it generally means that you will get a gentle introduction to the most basic yoga postures.
+  You probably won't work up a sweat in a hatha yoga class, but you should end up leaving class feeling longer, looser, and more relaxed."})
+yoga2 = Yoga.new({"type" => "Bikram", "description" => "About 30 years ago, Bikram Choudhury developed this school of yoga where classes are held in artificially heated rooms.
+  In a Bikram class, you will sweat like never before as you work your way through a series of 26 poses."})
+yoga3 = Yoga.new({"type" => "Ashtanga", "description" => "Ashtanga is based on ancient yoga teachings. It's a rigorous style of yoga that follows a specific sequence of postures and is similar to vinyasa yoga,
+  as each style links every movement to a breath. The difference is that Ashtanga always performs the exact same poses in the exact same order."})
+yoga4 = Yoga.new({"type" => "Vinyasa", "description" => "Vinyasa is a Sanskrit word for a phrase that roughly translates as \"to place in a special way\", referring—in hatha yoga—to a sequence of poses.
+  Vinyasa classes are known for their fluid, movement-intensive practices. Vinyasa teachers sequence their classes to smoothly transition from pose to pose, with the intention of linking breath to movement,
+  and often play music to keep things lively."})
+
+yoga1.save
+yoga2.save
+yoga3.save
+yoga4.save 
+
 binding.pry
 nil

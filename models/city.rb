@@ -84,4 +84,12 @@ class City
     cities.map { |city| City.new(city)}
   end
 
+  def yogas
+
+  end
+
+  def attractions
+
+  end 
+
 end
