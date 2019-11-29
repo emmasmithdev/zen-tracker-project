@@ -50,4 +50,18 @@ class YogaExperience
     results.map { |experience| YogaExperience.new(experience)}
   end
 
+  def self.visited
+    sql = "SELECT*FROM yoga_experiences WHERE visited = $1"
+    values = ["t"]
+    results = SqlRunner.run(sql, values)
+    results.map { |experience| YogaExperience.new(experience)}
+  end
+
+  def self.not_visited
+    sql = "SELECT*FROM yoga_experiences WHERE visited = $1"
+    values = ["f"]
+    results = SqlRunner.run(sql, values)
+    results.map { |experience| YogaExperience.new(experience)}
+  end
+
 end
