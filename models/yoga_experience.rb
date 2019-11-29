@@ -64,4 +64,20 @@ class YogaExperience
     results.map { |experience| YogaExperience.new(experience)}
   end
 
+  def city
+    sql = "SELECT*FROM cities WHERE id = $1"
+    values = [@city_id]
+    result = SqlRunner.run(sql, values)
+    return City.new(result[0])
+  end
+
+  def update_visited
+    @visited = "t"
+    sql = "UPDATE yoga_experiences SET visited = $1 WHERE id = $2"
+    values = [@visited, @id]
+    SqlRunner.run(sql, values)
+    city = self.city
+    city.update_visited 
+  end
+
 end

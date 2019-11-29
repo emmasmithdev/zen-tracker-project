@@ -74,8 +74,6 @@ class City
     SqlRunner.run(sql, values)
     country = self.country
     country.update_visited
-    continent = self.continent
-    continent.update_visited
   end
 
   def self.sort_by_distance
