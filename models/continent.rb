@@ -57,4 +57,10 @@ class Continent
     continents.map { |continent| Continent.new(continent)}
   end
 
+  def update_visited
+    sql = "UPDATE continents SET visited = $1 WHERE id = $2"
+    values = [@visited, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
