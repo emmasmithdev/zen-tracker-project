@@ -1,0 +1,17 @@
+<h2>Where would you like to go?</h2>
+<form action="/continents/visited" method="POST">
+  <select name="sort-continents" id="sort-continents">
+    <option value="all">All</option>
+    <option value="visited">Visited</option>
+    <option value="not-visited">Not Visited</option>
+  </select>
+  <input type="submit" value="Show">
+</form><br>
+<div class="grid-container">
+  <% for continent in @continents %>
+    <div class="grid-item">
+      <img src="<%= continent.image_url %>" alt="<%= continent.name %>">
+      <p><a href="/continents/<%= continent.id %>"><%= continent.name %></a></p>
+    </div>
+  <% end %>
+</div>

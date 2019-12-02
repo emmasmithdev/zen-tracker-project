@@ -1,0 +1,20 @@
+<h1>Which country did you visit?</h1>
+<form action="/countries" method="POST">
+  <label>Continent
+    <select name="continent_id">
+      <% for continent in @continents %>
+        <option value="<%= continent.id %>"><%= continent.name %></option>
+      <% end %>
+    </select>
+  </label>
+  <label for="country-name">Country Name:</label>
+    <input type="text" id="country-name" name="name">
+  <label for="visited">Visited?</label>
+    <select name="visited">
+      <option value="t">Yes</option>
+      <option value="f">Not Yet</option>
+    </select>
+  <input type="hidden" name="image_url" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7lQmrFB9ER7G8AO3gSeCi_HxlaC_Zu2ghTxQS4PWaaLp0J2n73g&s">
+  <br><br>
+  <input type="submit" value="Add Country">
+</form>

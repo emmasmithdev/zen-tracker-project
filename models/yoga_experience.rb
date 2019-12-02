@@ -1,8 +1,9 @@
 require_relative('../db/sql_runner')
+require_relative('city.rb')
 
 class YogaExperience
 
-  attr_reader :id, :studio_name, :city_id, :yoga_id, :description
+  attr_reader :id, :studio_name, :city_id, :yoga_id, :description, :image_url
   attr_accessor :bucket_list, :visited
 
   def initialize(options)
@@ -13,13 +14,14 @@ class YogaExperience
     @description = options["description"]
     @bucket_list = options["bucket_list"]
     @visited = options["visited"]
+    @image_url = options["image_url"]
   end
 
   def save
     sql = "INSERT INTO yoga_experiences
-    (studio_name, city_id, yoga_id, description, bucket_list, visited)
-    VALUES ($1, $2, $3, $4, $5, $6) RETURNING id"
-    values = [@studio_name, @city_id, @yoga_id, @description, @bucket_list, @visited]
+    (studio_name, city_id, yoga_id, description, bucket_list, visited, image_url)
+    VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
+    values = [@studio_name, @city_id, @yoga_id, @description, @bucket_list, @visited, @image_url]
     result = SqlRunner.run(sql, values)
     @id = result[0]["id"].to_i
   end
@@ -27,6 +29,12 @@ class YogaExperience
   def self.delete_all
     sql = "DELETE FROM yoga_experiences"
     SqlRunner.run(sql)
+  end
+
+  def self.all
+    sql = "SELECT*FROM yoga_experiences"
+    result = SqlRunner.run(sql)
+    result.map { |experience| YogaExperience.new(experience)}
   end
 
   def add_to_bucket_list
@@ -71,13 +79,27 @@ class YogaExperience
     return City.new(result[0])
   end
 
+  def yoga
+    sql = "SELECT*FROM yogas WHERE id = $1"
+    values = [@yoga_id]
+    result = SqlRunner.run(sql, values)
+    return Yoga.new(result[0])
+  end
+
   def update_visited
     @visited = "t"
     sql = "UPDATE yoga_experiences SET visited = $1 WHERE id = $2"
     values = [@visited, @id]
     SqlRunner.run(sql, values)
     city = self.city
-    city.update_visited 
+    city.update_visited
+    yoga = self.yoga
+    yoga.practises += 1 # why isn't this working?
+  end
+
+  def country
+    city = self.city
+    return city.country
   end
 
 end

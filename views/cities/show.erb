@@ -1,0 +1,26 @@
+<h1><%= @city.name %></h1>
+<h2><%= @city.country.name %>, <%= @city.continent.name %></h2>
+<div>
+  <% if @city.visited == "t" %>
+    <h3>VISITED!</h3>
+  <% else %>
+    <form action="/cities/<%= @city.id %>" method="POST">
+      <label>NOT YET VISITED</label>
+        <input class="btn update-visited" type="submit" value="Update" />
+      </form>
+  <% end %>
+</div>
+<br>
+<p>Types of yoga you can do in <%= @city.name %>:</p>
+<div class="grid-container">
+  <% for yoga in @city.yoga %>
+    <div class="grid-item">
+      <img src="<%= yoga.image_url %>" alt="<%= yoga.type %>">
+      <p><a href="/yogas/<%= yoga.id %>"><%= yoga.type %></a></p>
+    </div>
+  <% end %>
+</div>
+<div>
+  <p>Distance from Glasgow: <%= @city.distance %>km</p>
+  <img src="<%= @city.map_url %>" alt="<%= @city.name %> map">
+</div>

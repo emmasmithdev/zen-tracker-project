@@ -1,0 +1,10 @@
+<h1>Types of Yoga</h1>
+
+<div class="grid-container">
+  <% for yoga in @yogas %>
+    <div class="grid-item">
+      <img src="<%= yoga.image_url %>" alt="yoga.type">
+      <p><a href="/yogas/<%= yoga.id %>"><%= yoga.type %></a></p>
+  <% end %>
+    </div>
+</div>

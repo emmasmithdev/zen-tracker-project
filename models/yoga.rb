@@ -1,9 +1,10 @@
 require_relative('../db/sql_runner')
 require_relative('city.rb')
+require_relative('yoga_experience.rb')
 
 class Yoga
 
-  attr_reader :id, :type, :description
+  attr_reader :id, :type, :description, :image_url
   attr_accessor :practises
 
   def initialize(options)
@@ -11,12 +12,13 @@ class Yoga
     @type = options["type"]
     @description = options["description"]
     @practises = 0
+    @image_url = options["image_url"]
   end
 
   def save
-    sql = "INSERT INTO yogas (type, description)
-    VALUES ($1, $2) RETURNING id"
-    values = [@type, @description]
+    sql = "INSERT INTO yogas (type, description, image_url)
+    VALUES ($1, $2, $3) RETURNING id"
+    values = [@type, @description, @image_url]
     result = SqlRunner.run(sql, values)
     @id = result[0]["id"].to_i
   end
@@ -47,7 +49,18 @@ class Yoga
   end
 
   def cities
-    #list all cities where you can do this type of yoga
+    sql = "SELECT c.* FROM cities c INNER JOIN yoga_experiences y
+    ON y.city_id = c.id WHERE y.yoga_id = $1"
+    values =[@id]
+    results = SqlRunner.run(sql, values)
+    results.map { |city| City.new(city)}
+  end
+
+  def experiences
+    sql = "SELECT*FROM yoga_experiences WHERE yoga_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    results.map { |experience| YogaExperience.new(experience)}
   end
 
 end

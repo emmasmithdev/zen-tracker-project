@@ -1,0 +1,20 @@
+<h1><%= @yoga.type %> Yoga</h1>
+  <p><%= @yoga.description %></p>
+<h2><%= @yoga.type %> Yoga Experiences in This City</h2>
+<div class="grid-container">
+  <% for experience in @yoga.experiences %>
+    <div class="grid-item">
+      <img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>">
+      <p><a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a></p>
+    </div>
+  <% end %>
+</div>
+<h3>All cities you can practise <%= @yoga.type %> yoga:</h3>
+  <div class="grid-container">
+    <% for city in @yoga.cities %>
+      <div class="grid-item">
+        <img src="<%= city.image_url %>" alt="<%= city.name %>">
+        <p><a href="/cities/<%= city.id %>"><%= city.name %></a></p>
+      </div>
+    <% end %>
+  </div>

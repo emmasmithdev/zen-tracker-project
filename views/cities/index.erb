@@ -1,0 +1,17 @@
+<h2>Where would you like to go?</h2>
+<form action="/cities/visited" method="POST">
+  <select name="sort-cities" id="sort-cities">
+    <option value="all">All</option>
+    <option value="visited">Visited</option>
+    <option value="not-visited">Not Visited</option>
+  </select>
+  <input type="submit" value="Show">
+</form><br>
+<div class="grid-container">
+  <% for city in @cities %>
+    <div class="grid-item">
+      <img src="<%= city.image_url %>" alt="<%= city.name %>">
+      <p><a href="/cities/<%= city.id %>"><%= city.name %></a></p>
+    </div>
+  <% end %>
+</div>

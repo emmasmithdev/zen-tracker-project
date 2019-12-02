@@ -1,0 +1,22 @@
+<h1>Which city did you visit?</h1>
+<form action="/cities" method="POST">
+  <label>Country
+    <select name="country_id">
+      <% for country in @countries %>
+        <option value="<%= country.id %>"><%= country.name %></option>
+      <% end %>
+    </select>
+  </label>
+  <label for="city-name">City Name:</label>
+    <input type="text" id="city-name" name="name">
+  <label for="visited">Visited?</label>
+    <select name="visited">
+      <option value="t">Yes</option>
+      <option value="f">Not Yet</option>
+    </select>
+  <input type="hidden" name="image_url" value="http://www3.pictures.zimbio.com/mp/ot5NRtE9T0Ix.jpg">
+  <input type="hidden" name="map_url" value="https://www.mapsofworld.com/style_2019/images/world-map.png">
+  <input type="hidden" name="distance" value="1000">
+  <br><br>
+  <input type="submit" value="Add City">
+</form>

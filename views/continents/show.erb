@@ -1,0 +1,20 @@
+<h1><%= @continent.name %></h1>
+<div>
+  <% if @continent.visited == "t" %>
+    <h3>VISITED!</h3>
+  <% else %>
+    <form action="/continents/<%= @continent.id %>" method="POST">
+      <label>NOT YET VISITED</label>
+        <input class="btn update-visited" type="submit" value="Update" />
+      </form>
+  <% end %>
+</div>
+<br>
+<div class="grid-container">
+  <% for country in @continent.countries %>
+    <div class="grid-item">
+      <img src="<%= country.image_url %>" alt="<%= country.name %>">
+      <p><a href="/countries/<%= country.id %>"><%= country.name %></a></p>
+    </div>
+  <% end %>
+</div>

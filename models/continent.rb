@@ -3,7 +3,7 @@ require_relative('country.rb')
 
 class Continent
 
-  attr_reader :id, :name, :size
+  attr_reader :id, :name, :size, :image_url
   attr_accessor :visited
 
   def initialize(options)
@@ -11,12 +11,13 @@ class Continent
     @name = options["name"]
     @visited = options["visited"]
     @size = options["size"]
+    @image_url = options["image_url"]
   end
 
   def save
-    sql = "INSERT INTO continents (name, visited, size)
-    VALUES ($1, $2, $3) RETURNING id"
-    values = [@name, @visited, @size]
+    sql = "INSERT INTO continents (name, visited, size, image_url)
+    VALUES ($1, $2, $3, $4) RETURNING id"
+    values = [@name, @visited, @size, @image_url]
     result = SqlRunner.run(sql, values)
     @id = result[0]["id"].to_i
   end
@@ -75,8 +76,8 @@ class Continent
   def self.find(id)
     sql = 'SELECT*FROM continents WHERE id = $1'
     values = [id]
-    results = SqlRunner.run(sql, values)
-    return Continent.new(results[0])
+    result = SqlRunner.run(sql, values)
+    return Continent.new(result[0])
   end
 
   def cities
