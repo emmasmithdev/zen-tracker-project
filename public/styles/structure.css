@@ -1,0 +1,170 @@
+.homepage {
+  background-image: url('https://cdn.pixabay.com/photo/2019/05/31/16/48/mandala-4242567_960_720.jpg');
+  margin-left: 20px;
+  margin-right: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1 {
+  font-family: 'Sacramento', cursive;
+  color: white;
+  text-shadow: 2px 2px #551A8B;
+  font-size: 70px;
+  text-justify: center;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  line-height: 100px;
+  background-size: cover;
+  padding-right: 200px;
+}
+h2.zen {
+  color: white;
+  text-shadow: 2px 2px #551A8B;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 50px;
+  text-align: center;
+  margin: 0px;
+  line-height: 35px;
+  background-size: cover;
+  padding-right: 70px;
+}
+nav {
+  text-align: center;
+  background-color: rgba(0, 201, 204, 0.4);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  font-family: sans-sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-size: cover;
+}
+nav li {
+  display: inline;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 0px;
+}
+.sort {
+  text-align: right;
+}
+h2.where {
+  color: rgba(0, 201, 204, 0.4);
+  text-shadow: 2px 2px #551A8B;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 50px;
+  text-align: center;
+  margin: 0px;
+  line-height: 35px;
+  background-size: cover;
+  padding-top: 10px;
+}
+
+img {
+  height: 250px;
+  width: 320px;
+  box-shadow: 3px 3px 1px rgb(0, 26, 20, 0.5);
+  border-radius: 25px;
+}
+
+.grid-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center;
+}
+.grid-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.grid-item a {
+  color: #404040;
+  font-size: 20px;
+  text-align: center
+}
+.grid-item p {
+  text-align: center;
+  margin-top: 0px;
+}
+.info {
+  color: #551A8B;
+  font-size: 25px;
+}
+h3 {
+  color: #551A8B;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  text-align: center;
+  margin: 0px;
+  line-height: 35px;
+  background-size: cover;
+  padding-top: 10px;
+  float: top;
+}
+.visited {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.flex-box {
+  margin: 15px;
+}
+.bucket-list{
+  height: 600px;
+  background-color: #efdcef;
+}
+h4 {
+  color: #551A8B;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+  line-height: 25px;
+}
+.been-here li {
+  text-align: center;
+}
+.been-here {
+  background-color: #b3feff;
+  height: 600px;
+}
+.been-here a {
+  font-size: 15px;
+}
+.been-here li a {
+  font-size: 20px;
+}
+.btn {
+  color: #551A8B;
+  background-color: rgba(0, 201, 204, 0.4);
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+}
+select {
+  min-width:100px;
+  height: 30px;
+  background-color: rgba(0, 201, 204, 0.4);
+  font-size: 15px;
+}

@@ -1,38 +1,79 @@
-<h1>My Zen</h1>
-<h2>Experiences on Your Bucket List:</h2>
-  <ul>
-    <% for experience in @experiences %>
-      <% if experience.bucket_list == "t" %>
-        <li><img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>">
-        <p><a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a></p>
-        <p><%= experience.city.name %>, <%= experience.country.name %></p></li>
-      <% end %>
-    <% end %>
-  </ul>
-<h2>Places You've Visited:</h2>
-  <h3>Continents</h3>
-    <ul>
-      <% for continent in @continents %>
-        <% if continent.visited == "t" %>
-          <li><a href="/continents/<%= continent.id %>"><%= continent.name %></a></li>
-        <% end %>
-      <% end %>
-    </ul>
-  <h3>Countries</h3>
-    <ul>
-      <% for country in @countries %>
-        <% if country.visited == "t" %>
-          <li><a href="/countries/<%= country.id %>"><%= country.name %></a></li>
-        <% end %>
-      <% end %>
-    </ul>
-    <p><a href="/countries/new">Add a country</a></p>
-  <h3>Cities</h3>
-    <ul>
-      <% for city in @cities %>
-        <% if city.visited == "t" %>
-          <li><a href="/cities/<%= city.id %>"><%= city.name %></a></li>
-        <% end %>
-      <% end %>
-    </ul>
-    <p><a href="/cities/new">Add a city</a></p>
+<h2 class="where">My Zen</h2>
+<div class="flex-box">
+  <div class="row">
+    <div class="column">
+      <div class="bucket-list">
+        <h3>Your Bucket List:</h3>
+        <div class="grid-container">
+          <% for experience in @experiences %>
+            <% if experience.bucket_list == "t" %>
+              <div class="grid-item">
+                <img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>">
+                <p>
+                  <a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a>
+                </p>
+                <p><%= experience.city.name %>,
+                  <%= experience.country.name %></p>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class='column'>
+      <div class='been-here'>
+        <h3>Places You've Visited:</h3>
+        <div class="grid-container">
+            <div class="grid-item">
+        <h4>Continents</h4>
+        <br><br>
+        </div>
+          <div class="grid-item">
+            <br>
+        <ul class="visited">
+          <% for continent in @continents %>
+            <% if continent.visited == "t" %>
+              <li>
+                <a href="/continents/<%= continent.id %>"><%= continent.name %></a>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+        </div>
+          <div class="grid-item">
+        <h4>Countries</h4>
+          <p><a href="/countries/new">Add a country</a></p>
+          <br>
+        </div>
+          <div class="grid-item">
+        <ul class="visited">
+          <% for country in @countries %>
+            <% if country.visited == "t" %>
+              <li>
+                <a href="/countries/<%= country.id %>"><%= country.name %></a>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+        </div>
+          <div class="grid-item">
+        <h4>Cities</h4>
+          <p><a href="/cities/new">Add a city</a></p>
+          <br>
+        </div>
+          <div class="grid-item">
+        <ul class="visited">
+          <% for city in @cities %>
+            <% if city.visited == "t" %>
+              <li>
+                <a href="/cities/<%= city.id %>"><%= city.name %></a>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
