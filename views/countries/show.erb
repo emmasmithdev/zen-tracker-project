@@ -1,7 +1,7 @@
 <h2 class="where"><%= @country.name %></h2>
 <div class="sort">
   <% if @country.visited == "t" %>
-    <h3>VISITED!</h3>
+    <h3 class="updated">VISITED!</h3>
   <% else %>
     <form action="/countries/<%= @country.id %>" method="POST">
       <label>NOT YET VISITED</label>

@@ -1,13 +1,18 @@
 <br><h2 class="where">Enlightenment is Just Around the Corner...</h2><br>
+<br>
 <p class="info">Float away with these specially curated yoga experiences, tailored just for you.</p>
+<br>
 <div class="grid-container">
   <% for experience in @experiences %>
     <div class="grid-item">
       <img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>">
-      <p><a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a></p>
+      <div class="line">
+      <a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a>
       <% if experience.bucket_list == "t" %>
-        <p>On your bucket list</p>
+        <img src="https://previews.123rf.com/images/orfeev/orfeev1608/orfeev160800062/63136045-yoga-silhouette.jpg" alt="bucket list" class="hands">
       <% end %>
+      </div>
+      <br>
     </div>
   <% end %>
 </div>

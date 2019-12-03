@@ -125,6 +125,19 @@ h3 {
   float: top;
 }
 
+h3.updated {
+  color: #551A8B;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  margin-right: 20px;
+  line-height: 35px;
+  background-size: cover;
+  padding-top: 10px;
+  float: top;
+}
+
 .visited {
   list-style-type: none;
 }
@@ -148,11 +161,11 @@ h3 {
 }
 
 .bucket-list {
-  height: 1000px;
+  height: 3000px;
   background-color: #efdcef;
 }
 .been-here {
-  height: 1000px;
+  height: 3000px;
   background-color: rgba(0, 201, 204, 0.4);
 }
 
@@ -261,4 +274,14 @@ p.add-place {
 }
 .block {
   display: inline-block;
+}
+img.hands {
+  height: 30px;
+  width: 30px;
+  box-shadow: none;
+  margin-left: 20px;
+}
+.line {
+  display: inline;
+  text-align: center;
 }
