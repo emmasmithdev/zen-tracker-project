@@ -1,6 +1,6 @@
-<h1><%= @yoga.type %> Yoga</h1>
-  <p><%= @yoga.description %></p>
-<h2><%= @yoga.type %> Yoga Experiences in This City</h2>
+<h2 class="where"><%= @yoga.type %> Yoga</h2>
+  <p class="info"><%= @yoga.description %></p>
+<h3 class="experience"><%= @yoga.type %> Yoga Experiences in This City</h3>
 <div class="grid-container">
   <% for experience in @yoga.experiences %>
     <div class="grid-item">
@@ -9,7 +9,7 @@
     </div>
   <% end %>
 </div>
-<h3>All cities you can practise <%= @yoga.type %> yoga:</h3>
+<h3 class="experience">All cities you can practise <%= @yoga.type %> yoga:</h3>
   <div class="grid-container">
     <% for city in @yoga.cities %>
       <div class="grid-item">

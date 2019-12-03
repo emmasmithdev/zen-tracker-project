@@ -1,4 +1,4 @@
-<h1><%= @experience.studio_name %></h1>
+<h2 class="where"><%= @experience.studio_name %></h2>
 <h3><%= @experience.yoga.type %> Yoga in <%= @experience.city.name %>, <%= @experience.country.name %>.</h3>
 <div>
     <% if @experience.visited == "t" %>
@@ -6,14 +6,14 @@
     <% end %>
   </div>
   <br>
-<img src="<%= @experience.image_url %>" alt="<%= @experience.studio_name %>">
-<p><%= @experience.description %></p>
+<p class="info"><%= @experience.description %></p>
+<img class="studio" src="<%= @experience.image_url %>" alt="<%= @experience.studio_name %>">
 <div>
   <% if @experience.bucket_list == "t" %>
-    <p><%= @experience.studio_name %> is on your bucket list!</p>
+    <p class=btn-added><%= @experience.studio_name %> is on your bucket list!</p>
   <% else %>
     <form action="/yoga-experiences/<%= @experience.id %>" method="POST">
-      <input class="btn add-to-bucket-list" type="submit" value="Add to Bucket List?" />
+      <input class="btn-add-to-bucket-list" type="submit" value="Add to Bucket List?" />
     </form>
   <% end %>
 </div>

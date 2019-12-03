@@ -5,6 +5,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 h1 {
   font-family: 'Sacramento', cursive;
   color: white;
@@ -18,6 +19,7 @@ h1 {
   background-size: cover;
   padding-right: 200px;
 }
+
 h2.zen {
   color: white;
   text-shadow: 2px 2px #551A8B;
@@ -30,19 +32,21 @@ h2.zen {
   background-size: cover;
   padding-right: 70px;
 }
+
 nav {
   text-align: center;
   background-color: rgba(0, 201, 204, 0.4);
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 0px;
-  font-family: sans-sans-serif;
+  font-family: sans-serif;
   font-weight: bold;
   font-size: 20px;
   padding-top: 1px;
   padding-bottom: 1px;
   background-size: cover;
 }
+
 nav li {
   display: inline;
   text-align: center;
@@ -50,9 +54,12 @@ nav li {
   margin-right: 30px;
   margin-bottom: 0px;
 }
+
 .sort {
   text-align: right;
+  margin-right: 20px;
 }
+
 h2.where {
   color: rgba(0, 201, 204, 0.4);
   text-shadow: 2px 2px #551A8B;
@@ -79,6 +86,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
 }
+
 .grid-item {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -86,19 +94,24 @@ img {
   justify-content: center;
   margin: auto;
 }
+
 .grid-item a {
-  color: #404040;
+  color: #551A8B;
   font-size: 20px;
   text-align: center
 }
+
 .grid-item p {
   text-align: center;
   margin-top: 0px;
 }
+
 .info {
   color: #551A8B;
-  font-size: 25px;
+  font-size: 20px;
+  margin: 0px 20px 5px 20px;
 }
+
 h3 {
   color: #551A8B;
   font-family: sans-serif;
@@ -111,9 +124,11 @@ h3 {
   padding-top: 10px;
   float: top;
 }
+
 .visited {
   list-style-type: none;
 }
+
 .row {
   display: flex;
   flex-direction: row;
@@ -127,13 +142,16 @@ h3 {
   flex-basis: 100%;
   flex: 1;
 }
+
 .flex-box {
   margin: 15px;
 }
-.bucket-list{
+
+.bucket-list {
   height: 600px;
   background-color: #efdcef;
 }
+
 h4 {
   color: #551A8B;
   font-family: sans-serif;
@@ -142,19 +160,24 @@ h4 {
   text-align: center;
   line-height: 25px;
 }
+
 .been-here li {
   text-align: center;
 }
+
 .been-here {
   background-color: #b3feff;
   height: 600px;
 }
+
 .been-here a {
   font-size: 15px;
 }
+
 .been-here li a {
   font-size: 20px;
 }
+
 .btn {
   color: #551A8B;
   background-color: rgba(0, 201, 204, 0.4);
@@ -162,9 +185,48 @@ h4 {
   height: 30px;
   font-size: 15px;
 }
+
 select {
-  min-width:100px;
+  min-width: 100px;
   height: 30px;
   background-color: rgba(0, 201, 204, 0.4);
   font-size: 15px;
+}
+
+label {
+  color: #551A8B;
+}
+h3.experience {
+  font-size: 25px;
+  font-weight: normal;
+}
+img.studio {
+  height: 400px;
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+.btn-add-to-bucket-list {
+  color: #551A8B;
+  background-color: rgba(0, 201, 204, 0.4);
+  width: 210px;
+  height: 50px;
+  font-size: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-added {
+  color: #551A8B;
+  background-color: rgba(0, 201, 204, 0.4);
+  width: 500px;
+  height: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
 }

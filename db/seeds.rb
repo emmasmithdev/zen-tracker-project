@@ -39,6 +39,8 @@ country9 = Country.new({"name" => "Turkey", "visited" => "f", "continent_id" => 
 country10 = Country.new({"name" => "Nepal", "visited" => "f", "continent_id" => continent1.id, "image_url" => "https://lonelyplanetimages.imgix.net/mastheads/104733483%20.jpg?fit=crop&h=170&sharp=10&vib=20&w=170"})
 country11 = Country.new({"name" => "Kuwait", "visited" => "f", "continent_id" => continent1.id, "image_url" => "https://lonelyplanetimages.imgix.net/mastheads/GettyImages-155675188_super.jpg?fit=crop&h=170&sharp=10&vib=20&w=170"})
 country12 = Country.new({"name" => "China", "visited" => "f", "continent_id" => continent1.id, "image_url" => "https://lonelyplanetimages.imgix.net/a/g/hi/t/dcf1e0ec17d14df8fac9a7a57c7af63d-china.jpg?fit=crop&h=170&sharp=10&vib=20&w=170"})
+country13 = Country.new({"name" => "Japan", "visited" => "f", "continent_id" => continent1.id, "image_url" => "https://lonelyplanetimages.imgix.net/a/g/hi/t/d150c8c399f2d41ecf8864b69ddc7a35-mt-fuji.jpg?fit=crop&h=170&sharp=10&vib=20&w=170"})
+country14 = Country.new({"name" => "Singapore", "visited" => "f", "continent_id" => continent1.id, "image_url" => "https://lonelyplanetimages.imgix.net/mastheads/GettyImages-481194521_high.jpg?fit=crop&h=170&sharp=10&vib=20&w=170"})
 
 
 country1.save
@@ -53,6 +55,8 @@ country9.save
 country10.save
 country11.save
 country12.save
+country13.save
+country14.save
 
 city1 = City.new({"name" => "Bangkok", "visited" => "f", "country_id" => country1.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 9632, "image_url" => "https://lonelyplanetimages.imgix.net/a/g/hi/t/81d257161719d9da921211ddd8242449-bangkok.jpg?fit=crop&h=170&sharp=10&vib=20&w=170"})
 city2 = City.new({"name" => "Delhi", "visited" => "f", "country_id" => country2.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2017/11/map-126.png", "distance" => 6875, "image_url" => "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/80/9b.jpg?fit=crop"})
@@ -63,6 +67,9 @@ city6 = City.new({"name" => "Chiang Rai", "visited" => "f", "country_id" => coun
 city7 = City.new({"name" => "Kuwait City", "visited" => "f", "country_id" => country11.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2018/09/map-38.png", "distance" => 6500, "image_url" => "https://atlas-network.com/wp-content/uploads/2019/09/shutterstock_1228516114.jpg"})
 city8 = City.new({"name" => "Mumbai", "visited" => "f", "country_id" => country2.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2018/01/m-1.jpg", "distance" => 10096, "image_url" => "https://cdn.britannica.com/26/84526-050-45452C37/Gateway-monument-India-entrance-Mumbai-Harbour-coast.jpg"})
 city9 = City.new({"name" => "Au Nang", "visited" => "f", "country_id" => country1.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 10065, "image_url" => "http://static.asiawebdirect.com/m/phuket/portals/krabi-hotels-com/homepage/seedo/ao-nang/pagePropertiesImage/ao-nang.jpg.jpg"})
+city10 = City.new({"name" => "Pattaya", "visited" => "f", "country_id" => country1.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 10065, "image_url" => "https://lonelyplanetimages.imgix.net/a/g/hi/t/049df2f9e2818623c6671cefc8990cf8-sanctuary-of-truth.jpg?fit=crop&h=170&sharp=10&vib=20&w=170"})
+city11 = City.new({"name" => "Udon Thani", "visited" => "f", "country_id" => country1.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 10065, "image_url" => "http://static.asiawebdirect.com/m/phuket/portals/thaiwave-com/homepage/udon-thani/pagePropertiesImage/udon-thani_1.jpg.jpg"})
+city12 = City.new({"name" => "Hat Yai", "visited" => "f", "country_id" => country1.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 10065, "image_url" => "http://static.asiawebdirect.com/m/phuket/portals/thaiwave-com/homepage/hat-yai/pagePropertiesImage/hat-yai.jpg.jpg"})
 
 city1.save
 city2.save
@@ -73,6 +80,9 @@ city6.save
 city7.save
 city8.save
 city9.save
+city10.save
+city11.save
+city12.save
 
 yoga1 = Yoga.new({"type" => "Hatha", "description" => "Hatha yoga is a generic term that refers to any type of yoga that teaches physical postures.
   When a class is marketed as Hatha, it generally means that you will get a gentle introduction to the most basic yoga postures.
@@ -112,6 +122,8 @@ yoga_experience5 = YogaExperience.new({"studio_name" => "Ashtanga Yoga Bangkok",
   "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.aybkk.org/wp-content/uploads/2018/08/AYBKK-gallery_008-400x284.jpg"})
 yoga_experience6 = YogaExperience.new({"studio_name" => "Yoga Elements", "city_id" => city4.id, "yoga_id" => yoga5.id, "description" => "Yoga Elements is a method of teaching breath-focused yoga and holistic body-mind-spirit wellness. It is based on scientific understanding of the body and mind and taught using NLP-based communcation skills.",
   "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.yogajournal.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTY1OTAxNTQ2NTg2OTA4MDQy/irene-pappas-wheel-pose-drill.jpg"})
+yoga_experience7 = YogaExperience.new({"studio_name" => "Freedom Ashtanga", "city_id" => city1.id, "yoga_id" => yoga3.id, "description" => "Challenge your body and mind to achieve ultimate peace and tranquility.",
+    "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.rishikulyogshala.org/wp-content/uploads/2018/09/Ashtanga-Yoga-800x480.jpg"})
 
 yoga_experience1.save
 yoga_experience2.save
@@ -119,6 +131,7 @@ yoga_experience3.save
 yoga_experience4.save
 yoga_experience5.save
 yoga_experience6.save
+yoga_experience7.save
 
 binding.pry
 nil
