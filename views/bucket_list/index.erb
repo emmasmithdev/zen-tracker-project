@@ -3,16 +3,16 @@
   <div class="row">
     <div class="column">
       <div class="bucket-list">
-        <h3>Your Bucket List:</h3>
+        <h3 class="zen-title">Your Bucket List:</h3><br>
         <div class="grid-container">
           <% for experience in @experiences %>
             <% if experience.bucket_list == "t" %>
               <div class="grid-item">
-                <img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>">
+                <img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>"><br>
                 <p>
                   <a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a>
                 </p>
-                <p><%= experience.city.name %>,
+                <p class="info"><%= experience.city.name %>,
                   <%= experience.country.name %></p>
               </div>
             <% end %>
@@ -22,13 +22,13 @@
     </div>
     <div class='column'>
       <div class='been-here'>
-        <h3>Places You've Visited:</h3>
+        <h3 class="zen-title">Places You've Visited:</h3>
         <div class="grid-container">
             <div class="grid-item">
-        <h4>Continents</h4>
+        <h4 class="visited-title">Continents</h4>
         <br><br>
         </div>
-          <div class="grid-item">
+          <div class="grid-item list">
             <br>
         <ul class="visited">
           <% for continent in @continents %>
@@ -41,11 +41,11 @@
         </ul>
         </div>
           <div class="grid-item">
-        <h4>Countries</h4>
-          <p><a href="/countries/new">Add a country</a></p>
+        <h4 class="visited-title">Countries</h4>
+          <p class="add-place"><a href="/countries/new">ADD</a></p>
           <br>
         </div>
-          <div class="grid-item">
+          <div class="grid-item list">
         <ul class="visited">
           <% for country in @countries %>
             <% if country.visited == "t" %>
@@ -57,11 +57,11 @@
         </ul>
         </div>
           <div class="grid-item">
-        <h4>Cities</h4>
-          <p><a href="/cities/new">Add a city</a></p>
+        <h4 class="visited-title">Cities</h4>
+          <p class="add-place"><a href="/cities/new">ADD</a></p>
           <br>
         </div>
-          <div class="grid-item">
+          <div class="grid-item list">
         <ul class="visited">
           <% for city in @cities %>
             <% if city.visited == "t" %>

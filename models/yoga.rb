@@ -52,7 +52,7 @@ class Yoga
     sql = "SELECT c.* FROM cities c INNER JOIN yoga_experiences y
     ON y.city_id = c.id WHERE y.yoga_id = $1"
     values =[@id]
-    results = SqlRunner.run(sql, values)
+    results = SqlRunner.run(sql, values).uniq
     results.map { |city| City.new(city)}
   end
 

@@ -1,5 +1,11 @@
-<h1>Which country did you visit?</h1>
+<h2 class="where">Which country did you visit?</h2>
+<br><br><br>
+<div class="new">
+  <divclass="block">
 <form action="/countries" method="POST">
+  <label for="country-name">Country Name:</label>
+    <input type="text" id="country-name" name="name">
+    <br><br>
   <label>Continent
     <select name="continent_id">
       <% for continent in @continents %>
@@ -7,8 +13,7 @@
       <% end %>
     </select>
   </label>
-  <label for="country-name">Country Name:</label>
-    <input type="text" id="country-name" name="name">
+  <br><br>
   <label for="visited">Visited?</label>
     <select name="visited">
       <option value="t">Yes</option>
@@ -16,5 +21,7 @@
     </select>
   <input type="hidden" name="image_url" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7lQmrFB9ER7G8AO3gSeCi_HxlaC_Zu2ghTxQS4PWaaLp0J2n73g&s">
   <br><br>
-  <input type="submit" value="Add Country">
+  <input type="submit" value="Add Country" class="btn-add-to-bucket-list">
 </form>
+</div>
+</div>

@@ -1,6 +1,8 @@
 <h2 class="where"><%= @yoga.type %> Yoga</h2>
+<br>
   <p class="info"><%= @yoga.description %></p>
-<h3 class="experience"><%= @yoga.type %> Yoga Experiences in This City</h3>
+<h3 class="experience"><%= @yoga.type %> Yoga Experiences</h3>
+<br>
 <div class="grid-container">
   <% for experience in @yoga.experiences %>
     <div class="grid-item">
@@ -10,6 +12,7 @@
   <% end %>
 </div>
 <h3 class="experience">All cities you can practise <%= @yoga.type %> yoga:</h3>
+<br>
   <div class="grid-container">
     <% for city in @yoga.cities %>
       <div class="grid-item">

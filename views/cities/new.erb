@@ -1,5 +1,11 @@
-<h1>Which city did you visit?</h1>
+<h2 class="where">Which city did you visit?</h2>
+<br><br><br>
+<div class="new">
+  <div class="block">
 <form action="/cities" method="POST">
+  <label for="city-name">City Name:</label>
+    <input type="text" id="city-name" name="name">
+    <br><br>
   <label>Country
     <select name="country_id">
       <% for country in @countries %>
@@ -7,8 +13,7 @@
       <% end %>
     </select>
   </label>
-  <label for="city-name">City Name:</label>
-    <input type="text" id="city-name" name="name">
+  <br><br>
   <label for="visited">Visited?</label>
     <select name="visited">
       <option value="t">Yes</option>
@@ -18,5 +23,7 @@
   <input type="hidden" name="map_url" value="https://www.mapsofworld.com/style_2019/images/world-map.png">
   <input type="hidden" name="distance" value="1000">
   <br><br>
-  <input type="submit" value="Add City">
+  <input type="submit" value="Add City" class="btn-add-to-bucket-list">
 </form>
+</div>
+</div>

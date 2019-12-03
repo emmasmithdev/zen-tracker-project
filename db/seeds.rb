@@ -118,12 +118,14 @@ yoga_experience3 = YogaExperience.new({"studio_name" => "Meira's Ashtanga Yoga",
 yoga_experience4 = YogaExperience.new({"studio_name" => "Yogatique Bangkok", "city_id" => city1.id, "yoga_id" => yoga7.id, "description" => " At Yogatique we believe in the power of Yoga.
 When you enter our doors you’ll encounter a warm welcoming energy and a friendly neighborhood vibe, where you are welcome to explore the teachings of Yoga on your own terms. There are many compelling paths to Yoga and we want to feed your curiosity and sense of adventure by offering an array of styles and teachers under one roof.",
   "bucket_list" => "f", "visited" => "f", "image_url" => "https://yogatiquebangkok.files.wordpress.com/2019/06/yogatique-transparent1.png"})
-yoga_experience5 = YogaExperience.new({"studio_name" => "Ashtanga Yoga Bangkok", "city_id" => city1.id, "yoga_id" => yoga3.id, "description" => "Come and learn with us Ashtanga Yoga, an ancient system of Yoga that was taught by Vamana Rishi in the Yoga Korunta.",
-  "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.aybkk.org/wp-content/uploads/2018/08/AYBKK-gallery_008-400x284.jpg"})
+yoga_experience5 = YogaExperience.new({"studio_name" => "Ashtanga Yoga Bangkok", "city_id" => city1.id, "yoga_id" => yoga3.id, "description" => "Ashtanga Vinyasa Yoga is a style of yoga as exercise created by K. Pattabhi Jois during the 20th century, often promoted as a modern-day form of classical Indian yoga. He claimed to have learnt the system from his teacher, Tirumalai Krishnamacharya. The style is hot and energetic, synchronising breath with movements.
+  Come and learn with us Ashtanga Yoga, an ancient system of Yoga that was taught by Vamana Rishi in the Yoga Korunta.", "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.aybkk.org/wp-content/uploads/2018/08/AYBKK-gallery_008-400x284.jpg"})
 yoga_experience6 = YogaExperience.new({"studio_name" => "Yoga Elements", "city_id" => city4.id, "yoga_id" => yoga5.id, "description" => "Yoga Elements is a method of teaching breath-focused yoga and holistic body-mind-spirit wellness. It is based on scientific understanding of the body and mind and taught using NLP-based communcation skills.",
   "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.yogajournal.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTY1OTAxNTQ2NTg2OTA4MDQy/irene-pappas-wheel-pose-drill.jpg"})
 yoga_experience7 = YogaExperience.new({"studio_name" => "Freedom Ashtanga", "city_id" => city1.id, "yoga_id" => yoga3.id, "description" => "Challenge your body and mind to achieve ultimate peace and tranquility.",
-    "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.rishikulyogshala.org/wp-content/uploads/2018/09/Ashtanga-Yoga-800x480.jpg"})
+  "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.rishikulyogshala.org/wp-content/uploads/2018/09/Ashtanga-Yoga-800x480.jpg"})
+yoga_experience8 = YogaExperience.new({"studio_name" => "More Yoga", "city_id" => city8.id, "yoga_id" => yoga3.id, "description" => "Challenge your body and mind to achieve ultimate peace and tranquility.",
+  "bucket_list" => "f", "visited" => "f", "image_url" => "https://previews.123rf.com/images/gbrjo/gbrjo1604/gbrjo160400014/57670834-yoga-asana-set-with-cartoon-woman-exercising-various-different-yoga-poses-training.jpg"})
 
 yoga_experience1.save
 yoga_experience2.save
@@ -132,6 +134,7 @@ yoga_experience4.save
 yoga_experience5.save
 yoga_experience6.save
 yoga_experience7.save
+yoga_experience8.save
 
 binding.pry
 nil
