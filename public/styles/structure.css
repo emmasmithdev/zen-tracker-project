@@ -148,8 +148,12 @@ h3 {
 }
 
 .bucket-list {
-  height: 600px;
+  height: 1000px;
   background-color: #efdcef;
+}
+.been-here {
+  height: 1000px;
+  background-color: rgba(0, 201, 204, 0.4);
 }
 
 h4 {
@@ -159,23 +163,6 @@ h4 {
   font-weight: lighter;
   text-align: center;
   line-height: 25px;
-}
-
-.been-here li {
-  text-align: center;
-}
-
-.been-here {
-  background-color: #b3feff;
-  height: 600px;
-}
-
-.been-here a {
-  font-size: 15px;
-}
-
-.been-here li a {
-  font-size: 20px;
 }
 
 .btn {
@@ -263,6 +250,8 @@ p.add-place {
   margin-right: auto;
   border: 2px solid #551A8B;
   margin-top: 0px;
+  justify-content: center;
+  text-align: center;
 }
 .list {
   padding-top: 10px;

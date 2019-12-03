@@ -11,9 +11,12 @@
 <div>
   <% if @experience.bucket_list == "t" %>
     <p class=btn-added><%= @experience.studio_name %> is on your bucket list!</p>
+    <form action="/yoga-experiences/<%= @experience.id %>" method="POST">
+      <input type="submit" class="btn-add-to-bucket-list" value="Remove?"/>
+    </form>
   <% else %>
     <form action="/yoga-experiences/<%= @experience.id %>" method="POST">
-      <input class="btn-add-to-bucket-list" type="submit" value="Add to Bucket List?" />
+      <input class="btn-add-to-bucket-list" type="submit" value="Add to Bucket List?"/>
     </form>
   <% end %>
 </div>

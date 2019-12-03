@@ -35,7 +35,7 @@ end
 post '/cities' do
   @city = City.new(params)
   @city.save
-  redirect "/bucket-list"
+  redirect "/cities"
 end
 
 #update visited

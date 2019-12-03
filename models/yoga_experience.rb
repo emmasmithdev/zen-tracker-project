@@ -44,6 +44,13 @@ class YogaExperience
     SqlRunner.run(sql, values)
   end
 
+  def remove_from_bucket_list
+    @bucket_list = "f"
+    sql = "UPDATE yoga_experiences SET bucket_list = $1 WHERE id = $2"
+    values = [@bucket_list, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.find(id)
     sql = "SELECT*FROM yoga_experiences WHERE id = $1"
     values = [id]

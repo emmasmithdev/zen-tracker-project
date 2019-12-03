@@ -22,58 +22,36 @@
     </div>
     <div class='column'>
       <div class='been-here'>
-        <h3 class="zen-title">Places You've Visited:</h3>
+        <h3 class="zen-title">Places You've Visited:</h3><br>
         <div class="grid-container">
-            <div class="grid-item">
-        <h4 class="visited-title">Continents</h4>
-        <br><br>
-        </div>
-          <div class="grid-item list">
-            <br>
-        <ul class="visited">
           <% for continent in @continents %>
             <% if continent.visited == "t" %>
-              <li>
-                <a href="/continents/<%= continent.id %>"><%= continent.name %></a>
-              </li>
+              <div class="grid-item">
+                <img src="<%= continent.image_url %>" alt="<%= continent.name %>">
+                <a href="/continents/<%= continent.id %>"><%= continent.name %></a><br>
+              </div>
             <% end %>
           <% end %>
-        </ul>
-        </div>
-          <div class="grid-item">
-        <h4 class="visited-title">Countries</h4>
-          <p class="add-place"><a href="/countries/new">ADD</a></p>
-          <br>
-        </div>
-          <div class="grid-item list">
-        <ul class="visited">
+
           <% for country in @countries %>
             <% if country.visited == "t" %>
-              <li>
-                <a href="/countries/<%= country.id %>"><%= country.name %></a>
-              </li>
+              <div class="grid-item">
+                <img src="<%= country.image_url %>" alt="<%= country.name %>">
+                <a href="/countries/<%= country.id %>"><%= country.name %></a><br>
+              </div>
             <% end %>
           <% end %>
-        </ul>
-        </div>
-          <div class="grid-item">
-        <h4 class="visited-title">Cities</h4>
-          <p class="add-place"><a href="/cities/new">ADD</a></p>
-          <br>
-        </div>
-          <div class="grid-item list">
-        <ul class="visited">
+
           <% for city in @cities %>
             <% if city.visited == "t" %>
-              <li>
-                <a href="/cities/<%= city.id %>"><%= city.name %></a>
-              </li>
+              <div class="grid-item">
+                <img src="<%= city.image_url %>" alt="<%= city.name %>">
+                <a href="/cities/<%= city.id %>"><%= city.name %></a><br>
+              </div>
             <% end %>
           <% end %>
-        </ul>
+        </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>

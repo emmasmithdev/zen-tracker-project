@@ -13,10 +13,14 @@ get '/yoga-experiences/:id' do
   erb(:"yoga_experiences/show")
 end
 
-# add to bucket list
+# update bucket list
 post '/yoga-experiences/:id' do
   id = params["id"].to_i
   @experience = YogaExperience.find(id)
-  @experience.add_to_bucket_list
+  if @experience.bucket_list == "f"
+    @experience.add_to_bucket_list
+  elsif @experience.bucket_list == "t"
+    @experience.remove_from_bucket_list
+  end
   erb(:"yoga_experiences/show")
 end

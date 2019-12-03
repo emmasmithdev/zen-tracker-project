@@ -35,7 +35,7 @@ end
 post '/countries' do
   @country = Country.new(params)
   @country.save
-  redirect "/bucket-list"
+  redirect "/countries"
 end
 
 #update visited
