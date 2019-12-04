@@ -5,7 +5,7 @@
 <div class="grid-container">
   <% for experience in @experiences %>
     <div class="grid-item">
-      <img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>">
+      <a href="/yoga-experiences/<%= experience.id %>"><img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>"></a>
       <div class="line">
       <a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a>
       <% if experience.bucket_list == "t" %>

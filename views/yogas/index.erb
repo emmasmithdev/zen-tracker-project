@@ -3,7 +3,7 @@
 <div class="grid-container">
   <% for yoga in @yogas %>
     <div class="grid-item">
-      <img src="<%= yoga.image_url %>" alt="yoga.type">
+      <a href="/yogas/<%= yoga.id %>"><img src="<%= yoga.image_url %>" alt="yoga.type"></a>
       <p><a href="/yogas/<%= yoga.id %>"><%= yoga.type %></a></p>
     </div>
     <% end %>

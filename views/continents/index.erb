@@ -10,7 +10,7 @@
 <div class="grid-container">
   <% for continent in @continents %>
     <div class="grid-item">
-      <img src="<%= continent.image_url %>" alt="<%= continent.name %>">
+      <a href="/continents/<%= continent.id %>"><img src="<%= continent.image_url %>" alt="<%= continent.name %>"></a>
       <p><a href="/continents/<%= continent.id %>"><%= continent.name %></a></p>
     </div>
   <% end %>
