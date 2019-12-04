@@ -8,7 +8,7 @@
           <% for experience in @experiences %>
             <% if experience.bucket_list == "t" %>
               <div class="grid-item">
-                <img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>"><br>
+                <a href="/yoga-experiences/<%= experience.id %>"><img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>"></a><br>
                 <p>
                   <a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a>
                 </p>
@@ -24,19 +24,10 @@
       <div class='been-here'>
         <h3 class="zen-title">Places You've Visited:</h3><br>
         <div class="grid-container">
-          <% for continent in @continents %>
-            <% if continent.visited == "t" %>
-              <div class="grid-item">
-                <img src="<%= continent.image_url %>" alt="<%= continent.name %>">
-                <a href="/continents/<%= continent.id %>"><%= continent.name %></a><br>
-              </div>
-            <% end %>
-          <% end %>
-
           <% for country in @countries %>
             <% if country.visited == "t" %>
               <div class="grid-item">
-                <img src="<%= country.image_url %>" alt="<%= country.name %>">
+                <a href="/countries/<%= country.id %>"><img src="<%= country.image_url %>" alt="<%= country.name %>"></a>
                 <a href="/countries/<%= country.id %>"><%= country.name %></a><br>
               </div>
             <% end %>
@@ -45,7 +36,7 @@
           <% for city in @cities %>
             <% if city.visited == "t" %>
               <div class="grid-item">
-                <img src="<%= city.image_url %>" alt="<%= city.name %>">
+                <a href="/cities/<%= city.id %>"><img src="<%= city.image_url %>" alt="<%= city.name %>"></a>
                 <a href="/cities/<%= city.id %>"><%= city.name %></a><br>
               </div>
             <% end %>
