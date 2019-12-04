@@ -30,9 +30,9 @@ continent7.save
 country1 = Country.new({"name" => "Thailand", "visited" => "f", "continent_id" => continent1.id, "image_url" => "https://lonelyplanetimages.imgix.net/a/g/hi/t/e618e98dd3e7ef671a1edb90643755eb-wat-phumin.jpg?fit=crop&w=1920&h=832"})
 country2 = Country.new({"name" => "India", "visited" => "f", "continent_id" => continent1.id, "image_url" => "https://lonelyplanetimages.imgix.net/mastheads/283389.jpg?fit=crop&w=1920&h=832"})
 country3 = Country.new({"name" => "Cambodia", "visited" => "f", "continent_id" => continent1.id, "image_url" => "https://lonelyplanetimages.imgix.net/a/g/hi/t/301b3bac3047bbc59e86b0083ceeb05f-angkor-wat.jpg?fit=crop&w=1920&h=832"})
-country4 = Country.new({"name" => "Canada", "visited" => "f", "continent_id" => continent3.id, "image_url" => "https://lp-cms-production.imgix.net/2019-06/80814111.jpg?auto=format&fit=crop&q=40&ixlib=react-8.6.4&h=446&w=594"})
+country4 = Country.new({"name" => "Canada", "visited" => "t", "continent_id" => continent3.id, "image_url" => "https://lp-cms-production.imgix.net/2019-06/80814111.jpg?auto=format&fit=crop&q=40&ixlib=react-8.6.4&h=446&w=594"})
 country5 = Country.new({"name" => "USA", "visited" => "f", "continent_id" => continent3.id, "image_url" => "https://lp-cms-production.imgix.net/2019-06/93cbcf5a52559e6649736e18aaca98cc-usa.jpg?auto=format&fit=crop&q=40&ixlib=react-8.6.4&h=446&w=594"})
-country6 = Country.new({"name" => "Ethiopia", "visited" => "f", "continent_id" => continent2.id, "image_url" => "https://lp-cms-production.imgix.net/2019-06/c2af3eb20b44c86b0420b6d698107b21-tis-abay.jpg?auto=format&fit=crop&q=40&ixlib=react-8.6.4&h=446&w=594"})
+country6 = Country.new({"name" => "Ethiopia", "visited" => "t", "continent_id" => continent2.id, "image_url" => "https://lp-cms-production.imgix.net/2019-06/c2af3eb20b44c86b0420b6d698107b21-tis-abay.jpg?auto=format&fit=crop&q=40&ixlib=react-8.6.4&h=446&w=594"})
 country7 = Country.new({"name" => "Tanzania", "visited" => "f", "continent_id" => continent2.id, "image_url" => "https://lp-cms-production.imgix.net/2019-06/330f4d6ee95597157960e3f3056b4c9f-serengeti-national-park.jpg?auto=format&fit=crop&q=40&ixlib=react-8.6.4&h=446&w=594"})
 country8 = Country.new({"name" => "Brazil", "visited" => "f", "continent_id" => continent4.id, "image_url" => "https://lp-cms-production.imgix.net/2019-06/iStock_000038277788XXXLarge.jpg?auto=format&fit=crop&q=40&ixlib=react-8.6.4&h=446&w=594"})
 country9 = Country.new({"name" => "Turkey", "visited" => "f", "continent_id" => continent6.id, "image_url" => "https://lp-cms-production.imgix.net/2019-06/64275521.jpg?auto=format&fit=crop&q=40&ixlib=react-8.6.4&h=446&w=594"})
@@ -70,6 +70,7 @@ city9 = City.new({"name" => "Au Nang", "visited" => "f", "country_id" => country
 city10 = City.new({"name" => "Pattaya", "visited" => "f", "country_id" => country1.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 10065, "image_url" => "https://lonelyplanetimages.imgix.net/a/g/hi/t/049df2f9e2818623c6671cefc8990cf8-sanctuary-of-truth.jpg?fit=crop&h=170&sharp=10&vib=20&w=170"})
 city11 = City.new({"name" => "Udon Thani", "visited" => "f", "country_id" => country1.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 10065, "image_url" => "http://static.asiawebdirect.com/m/phuket/portals/thaiwave-com/homepage/udon-thani/pagePropertiesImage/udon-thani_1.jpg.jpg"})
 city12 = City.new({"name" => "Hat Yai", "visited" => "f", "country_id" => country1.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 10065, "image_url" => "http://static.asiawebdirect.com/m/phuket/portals/thaiwave-com/homepage/hat-yai/pagePropertiesImage/hat-yai.jpg.jpg"})
+city13 = City.new({"name" => "Varanasi", "visited" => "f", "country_id" => country2.id, "map_url" => "https://www.fly4free.com/wp-content/uploads/2016/12/brs1.png", "distance" => 10065, "image_url" => "https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2015/10/Varanasi-Best-Places-to-Visit-in-Uttar-Pradesh.jpg"})
 
 city1.save
 city2.save
@@ -83,6 +84,7 @@ city9.save
 city10.save
 city11.save
 city12.save
+city13.save
 
 yoga1 = Yoga.new({"type" => "Hatha", "description" => "Hatha yoga is a generic term that refers to any type of yoga that teaches physical postures.
   When a class is marketed as Hatha, it generally means that you will get a gentle introduction to the most basic yoga postures.
@@ -120,11 +122,11 @@ When you enter our doors you’ll encounter a warm welcoming energy and a friend
   "bucket_list" => "f", "visited" => "f", "image_url" => "https://yogatiquebangkok.files.wordpress.com/2019/06/yogatique-transparent1.png"})
 yoga_experience5 = YogaExperience.new({"studio_name" => "Ashtanga Yoga Bangkok", "city_id" => city1.id, "yoga_id" => yoga3.id, "description" => "Ashtanga Vinyasa Yoga is a style of yoga as exercise created by K. Pattabhi Jois during the 20th century, often promoted as a modern-day form of classical Indian yoga. He claimed to have learnt the system from his teacher, Tirumalai Krishnamacharya. The style is hot and energetic, synchronising breath with movements.
   Come and learn with us Ashtanga Yoga, an ancient system of Yoga that was taught by Vamana Rishi in the Yoga Korunta.", "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.aybkk.org/wp-content/uploads/2018/08/AYBKK-gallery_008-400x284.jpg"})
-yoga_experience6 = YogaExperience.new({"studio_name" => "Yoga Elements", "city_id" => city4.id, "yoga_id" => yoga5.id, "description" => "Yoga Elements is a method of teaching breath-focused yoga and holistic body-mind-spirit wellness. It is based on scientific understanding of the body and mind and taught using NLP-based communcation skills.",
+yoga_experience6 = YogaExperience.new({"studio_name" => "Yoga Elements", "city_id" => city2.id, "yoga_id" => yoga5.id, "description" => "Yoga Elements is a method of teaching breath-focused yoga and holistic body-mind-spirit wellness. It is based on scientific understanding of the body and mind and taught using NLP-based communcation skills.",
   "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.yogajournal.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTY1OTAxNTQ2NTg2OTA4MDQy/irene-pappas-wheel-pose-drill.jpg"})
 yoga_experience7 = YogaExperience.new({"studio_name" => "Freedom Ashtanga", "city_id" => city1.id, "yoga_id" => yoga3.id, "description" => "Challenge your body and mind to achieve ultimate peace and tranquility.",
   "bucket_list" => "f", "visited" => "f", "image_url" => "https://www.rishikulyogshala.org/wp-content/uploads/2018/09/Ashtanga-Yoga-800x480.jpg"})
-yoga_experience8 = YogaExperience.new({"studio_name" => "More Yoga", "city_id" => city8.id, "yoga_id" => yoga3.id, "description" => "Challenge your body and mind to achieve ultimate peace and tranquility.",
+yoga_experience8 = YogaExperience.new({"studio_name" => "More Yoga", "city_id" => city2.id, "yoga_id" => yoga6.id, "description" => "Challenge your body and mind to achieve ultimate peace and tranquility.",
   "bucket_list" => "f", "visited" => "f", "image_url" => "https://previews.123rf.com/images/gbrjo/gbrjo1604/gbrjo160400014/57670834-yoga-asana-set-with-cartoon-woman-exercising-various-different-yoga-poses-training.jpg"})
 
 yoga_experience1.save

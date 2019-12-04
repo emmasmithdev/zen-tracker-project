@@ -2,7 +2,7 @@
 <h3><%= @city.country.name %>, <%= @city.continent.name %></h3>
 <div class="sort">
   <% if @city.visited == "t" %>
-    <h3>VISITED!</h3>
+    <h3 class="updated">VISITED!</h3>
   <% else %>
     <form action="/cities/<%= @city.id %>" method="POST">
       <label>NOT YET VISITED</label>
