@@ -5,11 +5,13 @@
 <div class="grid-container">
   <% for experience in @experiences %>
     <div class="grid-item">
-      <a href="/yoga-experiences/<%= experience.id %>"><img src="<%= experience.image_url %>" alt="<%= experience.studio_name %>"></a>
+      <a href="/yoga-experiences/<%= experience.id %>"><img src="<%= experience.image_url %>"
+        alt="<%= experience.studio_name %>"></a>
       <div class="line">
       <a href="/yoga-experiences/<%= experience.id %>"><%= experience.studio_name %></a>
       <% if experience.bucket_list == "t" %>
-        <img src="https://previews.123rf.com/images/orfeev/orfeev1608/orfeev160800062/63136045-yoga-silhouette.jpg" alt="bucket list" class="hands">
+        <img src="https://previews.123rf.com/images/orfeev/orfeev1608/orfeev160800062/63136045-yoga-silhouette.jpg"
+        alt="bucket list" class="hands">
       <% end %>
       </div>
       <br>

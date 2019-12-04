@@ -92,4 +92,11 @@ class City
     results.map { |yoga| Yoga.new(yoga)}
   end
 
+  def self.search(name)
+    sql = "SELECT*FROM cities WHERE name = $1"
+    values = [name]
+    result = SqlRunner.run(sql, values)
+    return City.new(result[0])
+  end
+
 end

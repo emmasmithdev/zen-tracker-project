@@ -10,14 +10,14 @@ h1 {
   font-family: 'Sacramento', cursive;
   color: white;
   text-shadow: 2px 2px #551A8B;
-  font-size: 70px;
+  font-size: 80px;
   text-justify: center;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 0px;
   line-height: 100px;
   background-size: cover;
-  padding-right: 190px;
+  padding-right: 100px;
 }
 
 h2.zen {
@@ -25,12 +25,16 @@ h2.zen {
   text-shadow: 2px 2px #551A8B;
   font-family: sans-serif;
   font-weight: lighter;
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
   margin: 0px;
   line-height: 35px;
   background-size: cover;
-  padding-right: 70px;
+  padding-right: 0px;
+}
+
+a {
+  text-decoration: none;
 }
 
 nav {
@@ -41,7 +45,7 @@ nav {
   margin-top: 0px;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   padding-top: 1px;
   padding-bottom: 1px;
   background-size: cover;
@@ -53,6 +57,7 @@ nav li {
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 0px;
+  text-decoration: none;
 }
 
 .sort {
@@ -65,12 +70,12 @@ h2.where {
   text-shadow: 2px 2px #551A8B;
   font-family: sans-serif;
   font-weight: lighter;
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
   margin: 0px;
   line-height: 35px;
   background-size: cover;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 img {
@@ -97,7 +102,7 @@ img {
 
 .grid-item a {
   color: #551A8B;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center
 }
 
@@ -108,15 +113,15 @@ img {
 
 .info {
   color: #551A8B;
-  font-size: 20px;
+  font-size: 30px;
   margin: 0px 20px 5px 20px;
 }
 
 h3 {
   color: #551A8B;
   font-family: sans-serif;
-  font-weight: lighter;
-  font-size: 20px;
+  font-weight: normal;
+  font-size: 30px;
   text-align: center;
   margin: 0px;
   line-height: 35px;
@@ -279,9 +284,30 @@ img.hands {
   height: 30px;
   width: 30px;
   box-shadow: none;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .line {
   display: inline;
   text-align: center;
+}
+img.map {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 500px;
+}
+.search {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 35px;
+  text-align: center;
+}
+input.go {
+  color: #551A8B;
+  background-color: #efdcef;
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
 }
