@@ -96,7 +96,11 @@ class City
     sql = "SELECT*FROM cities WHERE name = $1"
     values = [name]
     result = SqlRunner.run(sql, values)
+    if result.count == 0
+      return nil
+    else
     return City.new(result[0])
+  end
   end
 
 end

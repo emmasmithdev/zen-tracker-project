@@ -13,6 +13,11 @@ get '/' do
 end
 
 post'/' do
-  @city = City.search(params["name"])
-  erb(:"cities/show")
+  result = City.search(params["name"])
+  if result != nil
+    @city = result
+    erb(:"cities/show")
+  else
+    redirect '/'
+end
 end
