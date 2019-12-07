@@ -189,6 +189,7 @@ h4 {
   width: 70px;
   height: 30px;
   font-size: 15px;
+  border-radius: 8px;
 }
 
 select {
@@ -223,6 +224,7 @@ img.studio {
   margin-left: auto;
   margin-right: auto;
   border: 2px solid #551A8B;
+  border-radius: 8px;
 }
 .btn-added {
   color: #551A8B;
@@ -235,6 +237,7 @@ img.studio {
   font-size: 25px;
   text-align: center;
   font-weight: bold;
+  border-radius: 8px;
 }
 h3.zen-title {
   color: #551A8B;
@@ -270,6 +273,7 @@ p.add-place {
   margin-top: 0px;
   justify-content: center;
   text-align: center;
+  border-radius: 8px;
 }
 .list {
   padding-top: 10px;

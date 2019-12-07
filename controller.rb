@@ -13,11 +13,16 @@ get '/' do
 end
 
 post'/' do
+  # If destination is a continent
+  # Call search function on Continent class 
+  # If destination is a country
+  # Call search function on Country class
+  # If destination is a city:
   result = City.search(params["name"])
   if result != nil
     @city = result
     erb(:"cities/show")
   else
     redirect '/'
-end
+  end
 end

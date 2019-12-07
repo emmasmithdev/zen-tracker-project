@@ -99,8 +99,8 @@ class City
     if result.count == 0
       return nil
     else
-    return City.new(result[0])
+      return City.new(result[0])
+    end
   end
-  end
-
+  
 end

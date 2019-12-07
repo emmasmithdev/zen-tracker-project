@@ -19,3 +19,10 @@ Any other ideas you might come up with
 
 I gave my app a yoga theme and named it ZenTracker. Find new yoga experiences and keep track of places you have visited.
 Enlightenment is just around the corner...
+
+To run this app:
+1. Create a psql database named zen_tracker and run the following command:
+psql -d zen_tracker -f zen_tracker.sql
+2. Run the file db/seeds.rb
+3. Run the file controller.rb
+4. Go to localhost:4567 in your browser
