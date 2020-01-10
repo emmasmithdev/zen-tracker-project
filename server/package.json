@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "In terminal in 'server' directory:",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
