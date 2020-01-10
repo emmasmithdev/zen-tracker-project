@@ -37,4 +37,4 @@ const calculator = function(footprint){
   }
   return score
 };
-console.log(calculator(footprint));  
+console.log(calculator(footprint));
