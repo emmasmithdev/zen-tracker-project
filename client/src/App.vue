@@ -1,9 +1,10 @@
 <template lang="html">
 <div id="app">
   <h1>CO2 and You!</h1>
-  <carbon-form/>
-  <carbon-score/>
-  <carbon-comparison
+  <carbon-form />
+  <carbon-score />
+  <carbon-comparison  />
+  <carbon-history :footprints="footprints"/>
 </div>
 
 </template>
@@ -19,7 +20,7 @@ export default {
   name: 'app',
   data () {
     return {
-      footprint: []
+      footprints: []
     }
   },
 
@@ -38,6 +39,12 @@ export default {
       const index = this.footprints.findIndex(footprint => footprint._id === id);
       this.footprints.splice(index,1);
     })
+  },
+  methods: {
+    fetchData() {
+      CarbonService.getFootprints()
+      .then(footprints => this.footprints = footprints);
+    }
   }
 
 }
