@@ -1,7 +1,7 @@
 const baseURL = 'http://localhost:3000/api/footprint/'
 
 export default {
-  getFootprint() {
+  getFootprints() {
     return fetch(baseURL)
     .then(res => res.json())
   },
