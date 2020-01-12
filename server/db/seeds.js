@@ -31,6 +31,16 @@ db.footprint.insertMany([
     recycle: true,
     tumble_dryer: false,
     energy_saving_lightbulbs: true
+  },
+  {
+    drive_car: false,
+    fly_plane: false,
+    renewable_energy: true,
+    vegan: true,
+    cold_water_wash: true,
+    recycle: true,
+    tumble_dryer: false,
+    energy_saving_lightbulbs: true
   }
 
 ]);

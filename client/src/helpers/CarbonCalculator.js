@@ -1,14 +1,3 @@
-const footprint = {
-  drive_car: true,
-  fly_plane: false,
-  renewable_energy: false,
-  vegan: false,
-  cold_water_wash: true,
-  recycle: true,
-  tumble_dryer: false,
-  energy_saving_lightbulbs: true
-}
-
 const calculator = function(footprint){
   let score = 0
   if (footprint.drive_car === false){
@@ -37,4 +26,3 @@ const calculator = function(footprint){
   }
   return score
 };
-console.log(calculator(footprint));
