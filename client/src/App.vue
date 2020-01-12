@@ -1,7 +1,6 @@
 <template lang="html">
 <div id="app">
 
-  <vue-title title="CO2 and You"></vue-title>
   <h1>CO2 and You</h1>
   <carbon-form/>
   <carbon-score :footprints="footprints" :score="score"/>
@@ -11,7 +10,6 @@
 </template>
 
 <script>
-  import VueTitle from './components/VueTitle';
   import CarbonForm from './components/CarbonForm';
   import CarbonScore from './components/CarbonScore';
   import CarbonComparison from './components/CarbonComparison';
@@ -57,85 +55,42 @@
         score += 0.1;
       }
       return Math.floor(score)
-    }
-  },
-  components: {
-    'vue-title': VueTitle,
+}
+},
 
-  <h1>CO2 and You!</h1>
-  <carbon-form />
-  <carbon-score />
-  <carbon-comparison  />
-  <carbon-history :footprints="footprints"/>
-</div>
 
-</template>
-
-<script>
-import CarbonForm from './components/CarbonForm';
-import CarbonScore from './components/CarbonScore';
-import CarbonComparison from './components/CarbonComparison';
-import CarbonHistory from './components/CarbonHistory';
-import { eventBus } from './services/CarbonService';
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      footprints: []
-    }
-  },
-
-  components: {
->>>>>>> acae5521fa1fbd4a7e63bbe150c1985a290109fe
+components: {
     'carbon-form': CarbonForm,
     'carbon-score': CarbonScore,
     'carbon-comparison': CarbonComparison,
     'carbon-history': CarbonHistory
   },
 
-    mounted() {
-      this.fetchData();
-
-      eventBus.$on('footprint-added', footprint => this.footprints.push(footprint));
-
-      eventBus.$on('footprint-deleted', id => {
-        const index = this.footprints.findIndex(footprint => footprint._id === id);
-        this.footprints.splice(index, 1);
-      })
-      eventBus.$on('most-recent-footprint', (footprint) => {
-        this.footprint = footprint
-      })
-    },
-    methods: {
-      fetchData(){
-          CarbonService.getFootprints()
-          .then(footprints => this.footprints = footprints);
-      }
-    }
-=======
   mounted() {
-    this.fetchData();
+       this.fetchData();
 
-    eventBus.$on('footprint-added', footprint => this.footprints.push(footprint));
+       eventBus.$on('footprint-added', footprint => this.footprints.push(footprint));
 
-    eventBus.$on('footprint-deleted', id => {
-      const index = this.footprints.findIndex(footprint => footprint._id === id);
-      this.footprints.splice(index,1);
-    })
-  },
-  methods: {
-    fetchData() {
-      CarbonService.getFootprints()
-      .then(footprints => this.footprints = footprints);
-    }
-  }
+       eventBus.$on('footprint-deleted', id => {
+         const index = this.footprints.findIndex(footprint => footprint._id === id);
+         this.footprints.splice(index, 1);
+       })
+       eventBus.$on('most-recent-footprint', (footprint) => {
+         this.footprint = footprint
+       })
+     },
+     methods: {
+       fetchData(){
+           CarbonService.getFootprints()
+           .then(footprints => this.footprints = footprints);
+       }
+     }
 
->>>>>>> acae5521fa1fbd4a7e63bbe150c1985a290109fe
-}
+}; //end of export
 </script>
 
 <style>
+
   html {
     height: 100%;
   }
@@ -146,6 +101,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   h1 {
     display: block;
     margin-left: auto;
