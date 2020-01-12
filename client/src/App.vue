@@ -1,7 +1,8 @@
 <template lang="html">
 <div id="app">
-  <vue-title title="CO2 & You"></vue-title>
-  <h1>CO2 & You</h1>
+
+  <vue-title title="CO2 and You"></vue-title>
+  <h1>CO2 and You</h1>
   <carbon-form/>
   <carbon-score :footprints="footprints" :score="score"/>
   <carbon-comparison :score="score" />
@@ -60,11 +61,39 @@
   },
   components: {
     'vue-title': VueTitle,
+
+  <h1>CO2 and You!</h1>
+  <carbon-form />
+  <carbon-score />
+  <carbon-comparison  />
+  <carbon-history :footprints="footprints"/>
+</div>
+
+</template>
+
+<script>
+import CarbonForm from './components/CarbonForm';
+import CarbonScore from './components/CarbonScore';
+import CarbonComparison from './components/CarbonComparison';
+import CarbonHistory from './components/CarbonHistory';
+import { eventBus } from './services/CarbonService';
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      footprints: []
+    }
+  },
+
+  components: {
+>>>>>>> acae5521fa1fbd4a7e63bbe150c1985a290109fe
     'carbon-form': CarbonForm,
     'carbon-score': CarbonScore,
     'carbon-comparison': CarbonComparison,
     'carbon-history': CarbonHistory
   },
+
     mounted() {
       this.fetchData();
 
@@ -84,6 +113,25 @@
           .then(footprints => this.footprints = footprints);
       }
     }
+=======
+  mounted() {
+    this.fetchData();
+
+    eventBus.$on('footprint-added', footprint => this.footprints.push(footprint));
+
+    eventBus.$on('footprint-deleted', id => {
+      const index = this.footprints.findIndex(footprint => footprint._id === id);
+      this.footprints.splice(index,1);
+    })
+  },
+  methods: {
+    fetchData() {
+      CarbonService.getFootprints()
+      .then(footprints => this.footprints = footprints);
+    }
+  }
+
+>>>>>>> acae5521fa1fbd4a7e63bbe150c1985a290109fe
 }
 </script>
 
