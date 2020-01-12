@@ -4,20 +4,17 @@
     <div class="footprint" >
 
       <label for="drive_car">Do You drive a car?</label>
-      <radio-button name="drive_car" id="drive_car_yes" label="Yes" value="true" v-model:="drive_car"/>
-      <radio-button name="drive_car" id="drive_car_no" label="No" value="false" v-model:="drive_car"/>
+      </br>
+      <label for="drive_car_yes">Yes</label>
+      <input type="radio" id="drive_car_yes" name="drive_car" v-model="drive_car" v-bind:value="true">
+      <label for="drive_car_no">No</label>
+      <input type="radio" id="drive_car_no" name="drive_car" v-model="drive_car" v-bind:value="false">
+
 
     </div>
-    <input type="submit" value="save" id="save">
+    <input type="submit" value="Save Footprint Data" id="save">
   </form>
-  <!-- drive_car: true,
-  fly_plane: false,
-  renewable_energy: false,
-  vegan: false,
-  cold_water_wash: true,
-  recycle: true,
-  tumble_dryer: false,
-  energy_saving_lightbulbs: tru -->
+
 </template>
 
 <script>
@@ -28,8 +25,8 @@ export default {
   name: "carbon-form",
   data() {
     return {
-      drive_car: "",
-      fly_plane: ""
+      drive_car: '',
+      fly_plane: '',
       }
   },
   methods: {
@@ -37,7 +34,7 @@ export default {
     event.preventDefault();
     const payload = {
       drive_car: this.drive_car,
-      fly_plane: this.fly_plane
+      fly_plane: this.fly_plane,
       };
 
       CarbonService.postFootprint(payload)
