@@ -42,5 +42,4 @@ db.footprint.insertMany([
     tumble_dryer: false,
     energy_saving_lightbulbs: true
   }
-
 ]);

@@ -10,11 +10,13 @@
 </template>
 
 <script>
+
   import VueTitle from './components/VueTitle';
   import CarbonForm from './components/CarbonForm';
   import CarbonScore from './components/CarbonScore';
   import CarbonComparison from './components/CarbonComparison';
   import CarbonHistory from './components/CarbonHistory';
+  import Chart from './components/Chart.vue';
   import { eventBus } from './main';
   import CarbonService from './services/CarbonService';
   import {calculator} from './helpers/CarbonCalculator';
@@ -33,7 +35,7 @@
     },
     score: function(){
       return calculator(this.footprint)
-}
+    }
 },
 
 
