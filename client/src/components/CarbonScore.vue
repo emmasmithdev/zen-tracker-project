@@ -26,7 +26,7 @@
       <p v-if="footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting</p>
       <p v-else>You have standard lightbulbs</p>
 
-      <p>Your score was {{footprint.carbonScore}} Thunbergs!</p>
+      <p>Your score was {{callCalculator(footprint)}} Thunbergs!</p>
       <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
 
     </div>
@@ -42,11 +42,11 @@ import {calculator} from '../helpers/CarbonCalculator.js';
 export default {
   name: "carbon-footprint",
   props: ['footprints'],
-  data() {
-    return {
-      carbonScore: 0
-    }
-  },
+  // data() {
+  //   return {
+  //     carbonScore: 0
+  //   }
+  // },
   filters: {
     format(value){
 			return new Date(value).toLocaleString().substring(0, 10);
@@ -57,10 +57,10 @@ export default {
       CarbonService.deleteFootprint(id)
       .then(() => eventBus.$emit('footprint-deleted', id)
     )},
-  },
-  mounted(){
-        footprint.carbonScore = calculator(footprint);
+    callCalculator(footprint) {
+      return calculator(footprint);
     }
+  },
 } //End of export
 </script>
 
