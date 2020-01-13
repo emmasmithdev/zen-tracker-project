@@ -1,4 +1,6 @@
 In terminal in 'server' directory:
+Because package lock contains information about the packages used, 'npm init' and 'install' should be all that is needed
+
 
 1) npm init
 2) npm install
