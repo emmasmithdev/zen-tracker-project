@@ -1,5 +1,6 @@
 use carbon_data;
 db.dropDatabase();
+
 db.footprint.insertMany([
   {
     drive_car: true,
@@ -41,5 +42,4 @@ db.footprint.insertMany([
     tumble_dryer: false,
     energy_saving_lightbulbs: true
   }
-
 ]);

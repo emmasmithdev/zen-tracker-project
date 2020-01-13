@@ -15,15 +15,14 @@
     name: "carbon-comparison",
     data(){
       return{
-        carbonHistory: null
+        carbonHistory: false
       }
     },
     props: ["score"],
     methods: {
       showHistory(event){
-        this.carbonHistory = true;
+        this.carbonHistory = !this.carbonHistory;
         eventBus.$emit('show-history', this.carbonHistory)
-        this.carbonHistory = false;
       }
     }
     }

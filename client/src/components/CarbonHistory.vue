@@ -1,15 +1,20 @@
 <template lang="html">
   <div class="component" id="carbon-history">
     <h2>Your carbon history</h2>
-    <chart/>
+    <chart :footprints="footprints"/>
   </div>
 </template>
 
 <script>
 import { eventBus } from '../main';
+import Chart from './Chart.vue';
+
 export default {
   name: "carbon-history",
-  props: ["footprints"]
+  props: ["footprints"],
+  components: {
+    'chart': Chart
+  }
 }
 </script>
 
