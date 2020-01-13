@@ -1,11 +1,11 @@
 <template lang="html">
 <div id="app">
   <vue-title title="CO2 & You"></vue-title>
-  <h1>CO2 & You</h1>
+  <h1>CO<sub>2</sub> & You</h1>
   <carbon-form/>
   <carbon-score :footprints="footprints" :score="score"/>
   <carbon-comparison :score="score" />
-  <carbon-history :footprints="footprints" />
+  <carbon-history v-if="carbonHistory" :footprints="footprints" />
 </div>
 </template>
 
@@ -17,12 +17,13 @@
   import CarbonHistory from './components/CarbonHistory';
   import { eventBus } from './main';
   import CarbonService from './services/CarbonService';
+  import Chart from './components/Chart.vue'
 
   export default {
     name: 'app',
     data () {
       return {
-        footprints: []
+        footprints: [],
       }
   },
   computed: {
@@ -63,7 +64,8 @@
     'carbon-form': CarbonForm,
     'carbon-score': CarbonScore,
     'carbon-comparison': CarbonComparison,
-    'carbon-history': CarbonHistory
+    'carbon-history': CarbonHistory,
+    'chart': Chart
   },
     mounted() {
       this.fetchData();
