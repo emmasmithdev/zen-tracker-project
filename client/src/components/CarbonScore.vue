@@ -7,6 +7,7 @@
 
       <p v-if="footprint.fly_plane === true">You've flown recently</p>
       <p v-else>You haven't flown recently</p>
+      <p>{{footprint.moment}}</p>
 
       <p v-if="footprint.renewable_energy === true">Your electricity is from renewable sources</p>
       <p v-else>Your electricity is from fossil fuels</p>
