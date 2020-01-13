@@ -1,4 +1,5 @@
 export const calculator = function(footprint){
+
     let score = 0.0
     if (footprint.drive_car === false){
       score += 2.4;

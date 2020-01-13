@@ -1,6 +1,6 @@
 <template lang="html">
   <form id="carbon-form" name="CarbonForm" v-on:submit="handleFootprint">
-    <h3>What's your carbon footprint?</h3>
+    <h2>What's your carbon footprint?</h2>
     <div class="footprint" >
 
       <label for="drive_car">Do You drive a car?</label>
@@ -115,5 +115,17 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  form {
+  width: 75%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin-bottom: 40px;
+  }
+
+  label {
+  min-width: 100px;
+  display: inline-block;
+  }
 
 </style>
