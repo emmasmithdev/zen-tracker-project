@@ -3,7 +3,7 @@
   <vue-title title="CO2 & You"></vue-title>
   <h1>CO<sub>2</sub> & You</h1>
   <carbon-form/>
-  <carbon-score :footprints="footprints" :score="score"/>
+  <carbon-score :footprint="footprint" :score="score"/>
   <carbon-comparison :score="score" />
   <carbon-history v-if="carbonHistory" :footprints="footprints" />
 </div>
