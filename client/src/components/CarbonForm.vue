@@ -101,6 +101,7 @@
 
 <script>
 import {eventBus} from '../main.js';
+import moment from 'moment';
 import CarbonService from '../services/CarbonService'
 
 export default {
@@ -114,7 +115,8 @@ export default {
       cold_water_wash: '',
       recycle: '',
       tumble_dryer: '',
-      energy_saving_lightbulbs: ''
+      energy_saving_lightbulbs: '',
+      timestamp: ''
     }
   },
   methods: {
@@ -128,7 +130,8 @@ export default {
       cold_water_wash: this.cold_water_wash,
       recycle: this.recycle,
       tumble_dryer: this.tumble_dryer,
-      energy_saving_lightbulbs: this.energy_saving_lightbulbs
+      energy_saving_lightbulbs: this.energy_saving_lightbulbs,
+      timestamp: moment().format('MMMM Do YYYY, h:mm:ss a')
       };
 
       CarbonService.postFootprint(payload)
