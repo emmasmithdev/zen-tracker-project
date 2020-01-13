@@ -1,29 +1,29 @@
 <template lang="html">
-  <div id="carbonFootprint">
+  <div class="component">
 
-    <div class="footprint" v-for="footprint in footprints">
-      <p v-if="footprint.drive_car === true">You drive a car</p>
+    <div class="footprint">
+      <p v-if="this.footprint.drive_car === true">You drive a car</p>
       <p v-else>You don't own a car<p>
 
-      <p v-if="footprint.fly_plane === true">You've flown recently</p>
+      <p v-if="this.footprint.fly_plane === true">You've flown recently</p>
       <p v-else>You haven't flown recently</p>
 
-      <p v-if="footprint.renewable_energy === true">Your electricity is from renewable sources</p>
+      <p v-if="this.footprint.renewable_energy === true">Your electricity is from renewable sources</p>
       <p v-else>Your electricity is from fossil fuels</p>
 
-      <p v-if="footprint.vegan === true">You have a vegan diet</p>
+      <p v-if="this.footprint.vegan === true">You have a vegan diet</p>
       <p v-else>You don't have a vegan diet</p>
 
-      <p v-if="footprint.cold_water_wash === true">You wash clothes at low temperatures</p>
+      <p v-if="this.footprint.cold_water_wash === true">You wash clothes at low temperatures</p>
       <p v-else>You wash clothes at hotter temperatures</p>
 
-      <p v-if="footprint.recycle === true">You recycle your household waste</p>
+      <p v-if="this.footprint.recycle === true">You recycle your household waste</p>
       <p v-else>You don't recycle</p>
 
-      <p v-if="footprint.tumble_dryer === true">You use a tumble dryer</p>
+      <p v-if="this.footprint.tumble_dryer === true">You use a tumble dryer</p>
       <p v-else>You hang-dry your clothes</p>
 
-      <p v-if="footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting</p>
+      <p v-if="this.footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting</p>
       <p v-else>You have standard lightbulbs</p>
 
       <p>Your score was {{callCalculator(footprint)}} Thunbergs!</p>
@@ -41,7 +41,7 @@ import {calculator} from '../helpers/CarbonCalculator.js';
 
 export default {
   name: "carbon-footprint",
-  props: ['footprints'],
+  props: ['footprint'],
   // data() {
   //   return {
   //     carbonScore: 0
@@ -64,6 +64,12 @@ export default {
 } //End of export
 </script>
 
-
 <style lang="css" scoped>
+.component {
+  width: 75%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin-bottom: 40px;
+}
 </style>
