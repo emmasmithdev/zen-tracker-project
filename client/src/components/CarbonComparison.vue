@@ -1,5 +1,6 @@
 <template lang="html">
-  <div id="carbon-comparison">
+  <div class="component" id="carbon-comparison">
+    <h2>How do you compare to the national average?</h2>
     <p>The average person in the UK produces 10 tonnes of carbon per year.</p>
     <p>The national average score is 2 Thunbergs.</p>
     <p>Your score is {{score}} Thunbergs.</p>
@@ -14,7 +15,7 @@
     name: "carbon-comparison",
     data(){
       return{
-        carbonHistory: false
+        carbonHistory: null
       }
     },
     props: ["score"],
@@ -29,4 +30,11 @@
 </script>
 
 <style lang="css" scoped>
+  .component {
+    width: 75%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin-bottom: 40px;
+  }
 </style>
