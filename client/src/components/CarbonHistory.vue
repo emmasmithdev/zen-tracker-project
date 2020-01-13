@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="component" id="carbon-history">
     <h2>Your carbon history</h2>
-    <chart/>
+    <chart :footprints="footprints"/>
   </div>
 </template>
 

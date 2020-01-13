@@ -10,6 +10,8 @@
 
 <script>
 export default {
+  name: "chart",
+  props: ["footprints"],
   data () {
     return {
       title: '',
