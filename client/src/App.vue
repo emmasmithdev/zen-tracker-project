@@ -10,7 +10,6 @@
 </template>
 
 <script>
-  import VueTitle from './components/VueTitle';
   import CarbonForm from './components/CarbonForm';
   import CarbonScore from './components/CarbonScore';
   import CarbonComparison from './components/CarbonComparison';
@@ -57,39 +56,43 @@
         score += 0.1;
       }
       return Math.floor(score)
-    }
-  },
-  components: {
-    'vue-title': VueTitle,
+}
+},
+
+
+components: {
     'carbon-form': CarbonForm,
     'carbon-score': CarbonScore,
     'carbon-comparison': CarbonComparison,
     'carbon-history': CarbonHistory,
     'chart': Chart
   },
-    mounted() {
-      this.fetchData();
 
-      eventBus.$on('footprint-added', footprint => this.footprints.push(footprint));
+  mounted() {
+       this.fetchData();
 
-      eventBus.$on('footprint-deleted', id => {
-        const index = this.footprints.findIndex(footprint => footprint._id === id);
-        this.footprints.splice(index, 1);
-      })
-      eventBus.$on('most-recent-footprint', (footprint) => {
-        this.footprint = footprint
-      })
-    },
-    methods: {
-      fetchData(){
-          CarbonService.getFootprints()
-          .then(footprints => this.footprints = footprints);
-      }
-    }
-}
+       eventBus.$on('footprint-added', footprint => this.footprints.push(footprint));
+
+       eventBus.$on('footprint-deleted', id => {
+         const index = this.footprints.findIndex(footprint => footprint._id === id);
+         this.footprints.splice(index, 1);
+       })
+       eventBus.$on('most-recent-footprint', (footprint) => {
+         this.footprint = footprint
+       })
+     },
+     methods: {
+       fetchData(){
+           CarbonService.getFootprints()
+           .then(footprints => this.footprints = footprints);
+       }
+     }
+
+}; //end of export
 </script>
 
 <style>
+
   html {
     height: 100%;
   }
@@ -100,6 +103,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   h1 {
     display: block;
     margin-left: auto;

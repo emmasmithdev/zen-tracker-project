@@ -27,8 +27,8 @@ const createRouter = function (collection) {
 
 //CREATE
   router.post('/', (req, res) => {
-    const newGame = req.body;
-    collection.insertOne(newGame)
+    const newFootprint = req.body;
+    collection.insertOne(newFootprint)
       .then((result) => {
         res.json(result.ops[0])})
       .catch((error) => {
