@@ -20,7 +20,7 @@ export default {
 
 <style lang="css" scoped>
 .component {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.5);
   padding: 20px;

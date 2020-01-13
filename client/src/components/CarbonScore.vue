@@ -27,6 +27,7 @@
       <p v-else>You have standard lightbulbs</p>
 
       <p>Your score was {{callCalculator(footprint)}} Thunbergs!</p>
+      
       <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
 
     </div>
@@ -65,11 +66,25 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.component {
-  width: 75%;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.5);
-  padding: 20px;
-  margin-bottom: 40px;
+  .component {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+button {
+  background-color: rgb(102, 128, 127);
+  border: 2px solid black;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 8px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 </style>

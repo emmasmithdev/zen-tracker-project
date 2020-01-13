@@ -78,6 +78,7 @@ components: {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: 20px;
   }
 
   h1 {
@@ -87,5 +88,10 @@ components: {
     text-align: center;
     color: rgb(0, 0, 0, 0.7);
     font-size: 45px;
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin-bottom: 40px;
   }
 </style>
