@@ -13,7 +13,6 @@ export default {
   data () {
     return {
       title: '',
-      points: [10, 0, 8, 2, 6, 4, 5, 5],
       chartType: 'column',
       seriesColor: '#6fcd98',
       colorInputIsSupported: null,
@@ -24,10 +23,13 @@ export default {
           type: 'column'
         },
         title: {
-          text: 'Your Carbon History'
+          text: 'Carbon Saved'
         },
         xAxis: {
-          categories: ["date", "date", "date", "date", "date", "date", "date", "date"]
+          categories: ["date", "date", "date", "date", "date", "date", "date", "date"],
+          title: {
+            text: "Date"
+          }
         },
         yAxis: {
           min: 0,
@@ -35,33 +37,28 @@ export default {
             text: "Score in Thunbergs"
           }
         },
+        plotOptions: {
+       column: {
+           stacking: 'normal',
+           dataLabels: {
+               enabled: false
+           }
+       }
+   },
         series: [{
-          data: [10, 0, 8, 2, 6, 4, 5, 5],
+          name: "Transport",
+          data: [0, 0, 0, 2.4, 2.4, 2.4, 4, 4],
           color: '#6fcd98'
-        }]
+        },
+        {
+          name: "Home",
+          data: [0, 0.3125, 0.3125, 1.8125, 1.8125, 2.2125, 2.257, 2.257]
+        },
+      {
+        name: "Diet",
+        data: [0, 0, 0, 0, 0, 0, 0.8, 0.8]
+      }]
       }
-    }
-  },
-  created () {
-    let i = document.createElement('input')
-    i.setAttribute('type', 'color');
-    (i.type === 'color') ? this.colorInputIsSupported = true : this.colorInputIsSupported = false
-  },
-  watch: {
-    title (newValue) {
-      this.chartOptions.title.text = newValue
-    },
-    points (newValue) {
-      this.chartOptions.series[0].data = newValue
-    },
-    chartType (newValue) {
-      this.chartOptions.chart.type = newValue.toLowerCase()
-    },
-    seriesColor (newValue) {
-      this.chartOptions.series[0].color = newValue.toLowerCase()
-    },
-    animationDuration (newValue) {
-      this.updateArgs[2].duration = Number(newValue)
     }
   }
 }
