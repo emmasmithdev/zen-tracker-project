@@ -26,7 +26,7 @@
       <p v-if="footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting</p>
       <p v-else>You have standard lightbulbs</p>
 
-      <p>Your score was {{carbonScore}} Thunbergs!</p>
+      <p>Your score was {{footprint.carbonScore}} Thunbergs!</p>
       <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
 
     </div>
@@ -59,10 +59,11 @@ export default {
     )},
   },
   mounted(){
-        carbonScore = calculator(footprint)
+        footprint.carbonScore = calculator(footprint);
     }
 } //End of export
 </script>
+
 
 <style lang="css" scoped>
 </style>
