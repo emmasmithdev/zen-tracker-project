@@ -7,7 +7,6 @@
 
       <p v-if="this.footprint.fly_plane === true">You've flown recently</p>
       <p v-else>You haven't flown recently</p>
-      <p>{{footprint.moment}}</p>
 
       <p v-if="this.footprint.renewable_energy === true">Your electricity is from renewable sources</p>
       <p v-else>Your electricity is from fossil fuels</p>
@@ -28,6 +27,10 @@
       <p v-else>You have standard lightbulbs</p>
 
       <p>Your score was {{callCalculator(footprint)}} Thunbergs!</p>
+
+      <p>This carbon footprint is from {{footprint.timestamp}}</p>
+
+
       <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
 
     </div>
@@ -37,6 +40,7 @@
 
 <script>
 import { eventBus } from '../main.js';
+import moment from 'moment';
 import CarbonService from '@/services/CarbonService.js';
 import {calculator} from '../helpers/CarbonCalculator.js';
 
@@ -61,7 +65,8 @@ export default {
     callCalculator(footprint) {
       return calculator(footprint);
     }
-  },
+
+  }
 } //End of export
 </script>
 
