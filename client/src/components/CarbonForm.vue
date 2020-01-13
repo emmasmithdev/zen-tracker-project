@@ -37,7 +37,7 @@
       </div>
       <div class="grid-item">
       <label for="cold_water_wash">Do you run your washing machine at 30?</label>
-      <img src="https://cdn1.iconfinder.com/data/icons/hotel-and-camping-50-linear-icons/30/hotel_and_camping_washing_machine_dark_icon-512.png" alt="washing machine logo">
+      <img src="https://cdn1.iconfinder.com/data/icons/hotel-and-camping-50-linear-icons/30/hotel_and_camping_tumble_dryer_dark_icon-256.png" alt="washing machine logo">
         <label for="cold_water_wash_yes">Yes</label>
         <input type="radio" id="cold_water_wash_yes" name="cold_water_wash" v-model="cold_water_wash" v-bind:value="true">
         <label for="cold_water_wash_no">No</label>
@@ -53,7 +53,8 @@
       </div>
       <div class="grid-item">
       <label for="tumble_dryer">Do you tumble-dry your clothes?</label>
-      </br>
+      <br><br>
+      <img src="https://cdn3.iconfinder.com/data/icons/laundry-45/512/dryer-tumble-electric-device-furniture-512.png" alt="dryer logo">
         <label for="tumble_dryer_yes">Yes</label>
         <input type="radio" id="tumble_dryer_yes" name="tumble_dryer" v-model="tumble_dryer" v-bind:value="true">
         <label for="tumble_dryer_no">No</label>
@@ -61,7 +62,7 @@
       </div>
       <div class="grid-item">
       <label for="energy_saving_lightbulbs">Do you use LED lightbulbs throughout your home?</label>
-      <img src="https://media.istockphoto.com/vectors/outline-of-light-bulb-icon-on-white-background-ecology-and-green-vector-id844905106" alt="lightbulb logo">
+      <img src="https://cdn3.iconfinder.com/data/icons/block/32/lightbulb_compact-512.png" alt="lightbulb logo">
         <label for="energy_saving_lightbulbs_yes">Yes</label>
         <input type="radio" id="energy_saving_lightbulbs_yes" name="energy_saving_lightbulbs" v-model="energy_saving_lightbulbs" v-bind:value="true">
         <label for="energy_saving_lightbulbs_no">No</label>
@@ -126,6 +127,8 @@ export default {
   label {
   min-width: 100px;
   display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
   }
   img {
     width: 100px;
@@ -149,5 +152,9 @@ export default {
     margin-left: auto;
     text-align: center;
   }
+  input[type="radio"] {
+  margin-right: 0;
+  margin-left: 0;
+}
 
 </style>
