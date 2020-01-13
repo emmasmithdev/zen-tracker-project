@@ -5,7 +5,7 @@
   <carbon-form/>
   <carbon-score :footprint="footprint" :score="score"/>
   <carbon-comparison :score="score" />
-  <carbon-history v-if="carbonHistory" :footprints="footprints" />
+  <carbon-history v-if="carbonHistory" :footprints="footprints" :categories="categories" />
 </div>
 </template>
 
@@ -35,8 +35,11 @@
     },
     score: function(){
       return calculator(this.footprint)
-    }
-},
+    },
+    categories: function(){
+      return this.footprints.map(footprint => footprint.timestamp);
+      }
+    },
 
 
 components: {

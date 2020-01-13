@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="component" id="carbon-history">
     <h2>Your carbon history</h2>
-    <chart :footprints="footprints"/>
+    <chart :footprints="footprints" :categories="categories"/>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import Chart from './Chart.vue';
 
 export default {
   name: "carbon-history",
-  props: ["footprints"],
+  props: ["footprints", "categories"],
   components: {
     'chart': Chart
   }

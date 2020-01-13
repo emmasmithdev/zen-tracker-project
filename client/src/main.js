@@ -3,6 +3,7 @@ import App from './App.vue'
 import HighchartsVue from 'highcharts-vue'
 
 Vue.use(HighchartsVue)
+Vue.use(require('vue-moment'));
 
 Vue.config.productionTip = false
 

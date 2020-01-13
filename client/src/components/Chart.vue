@@ -11,7 +11,7 @@
 <script>
 export default {
   name: "chart",
-  props: ["footprints"],
+  props: ["footprints", "categories"],
   data () {
     return {
       title: '',
@@ -28,7 +28,7 @@ export default {
           text: 'Carbon Saved'
         },
         xAxis: {
-          categories: ["date", "date", "date", "date", "date", "date", "date", "date"],
+          categories: this.categories,
           title: {
             text: "Date"
           }
@@ -49,16 +49,16 @@ export default {
    },
         series: [{
           name: "Transport",
-          data: [0, 0, 0, 2.4, 2.4, 2.4, 4, 4],
+          data: [0, 2.4, 2.4, 2.4, 4, 4],
           color: '#6fcd98'
         },
         {
           name: "Home",
-          data: [0, 0.3125, 0.3125, 1.8125, 1.8125, 2.2125, 2.257, 2.257]
+          data: [0.3125, 1.8125, 1.8125, 2.2125, 2.257, 2.257]
         },
       {
         name: "Diet",
-        data: [0, 0, 0, 0, 0, 0, 0.8, 0.8]
+        data: [0, 0, 0, 0, 0.8, 0.8]
       }]
       }
     }
