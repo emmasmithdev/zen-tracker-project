@@ -7,9 +7,14 @@
 
 <script>
 import { eventBus } from '../main';
+import Chart from './Chart.vue';
+
 export default {
   name: "carbon-history",
-  props: ["footprints"]
+  props: ["footprints"],
+  components: {
+    'chart': Chart
+  }
 }
 </script>
 

@@ -5,7 +5,7 @@
   <carbon-form/>
   <carbon-score :footprints="footprints" :score="score"/>
   <carbon-comparison :score="score" />
-  <carbon-history v-if="carbonHistory=true" :footprints="footprints" />
+  <carbon-history v-if="carbonHistory" :footprints="footprints" />
 </div>
 </template>
 
@@ -18,13 +18,13 @@
   import { eventBus } from './main';
   import CarbonService from './services/CarbonService';
   import {calculator} from './helpers/CarbonCalculator';
-  import Chart from './components/Chart.vue'
 
   export default {
     name: 'app',
     data () {
       return {
         footprints: [],
+        carbonHistory: false
       }
   },
   computed: {
@@ -42,8 +42,7 @@ components: {
     'carbon-form': CarbonForm,
     'carbon-score': CarbonScore,
     'carbon-comparison': CarbonComparison,
-    'carbon-history': CarbonHistory,
-    'chart': Chart
+    'carbon-history': CarbonHistory
   },
 
   mounted() {
@@ -58,6 +57,7 @@ components: {
        eventBus.$on('most-recent-footprint', (footprint) => {
          this.footprint = footprint
        })
+       eventBus.$on('show-history', (showHistory) => this.carbonHistory = showHistory);
      },
      methods: {
        fetchData(){
