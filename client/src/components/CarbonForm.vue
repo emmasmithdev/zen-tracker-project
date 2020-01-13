@@ -150,6 +150,7 @@ export default {
   background: rgba(255, 255, 255, 0.5);
   padding: 20px;
   margin-bottom: 40px;
+  margin-top: 0px;
   }
   label {
   min-width: 100px;

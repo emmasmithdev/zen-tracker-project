@@ -33,7 +33,7 @@ export default {
         xAxis: {
           categories: this.categories,
           title: {
-            text: "Date"
+            text: ""
           }
         },
         yAxis: {

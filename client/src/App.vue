@@ -1,7 +1,8 @@
 <template lang="html">
 <div id="app">
   <vue-title title="CO2 & You"></vue-title>
-  <h1>CO<sub>2</sub> & You</h1>
+  <h1><img src="https://cdn2.iconfinder.com/data/icons/camping-trekking-1/614/2703_-_Trees-512.png" alt="tree">
+    CO<sub>2</sub> & You</h1>
   <carbon-form/>
   <carbon-score :footprint="footprint" :score="score"/>
   <carbon-comparison :score="score" />
@@ -83,18 +84,21 @@ components: {
     background-size: cover;
     font-size: 20px;
   }
-
   h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    color: rgb(0, 0, 0, 0.7);
+    text-align: left;
+    color: rgb(10, 150, 136);
     font-size: 45px;
     width: 80%;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgb(1, 12, 11, 0.7);
     padding: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
+  }
+  img {
+    height: 75px;
+    width: 75px;
   }
 </style>
