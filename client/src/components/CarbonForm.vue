@@ -121,7 +121,8 @@ export default {
   },
   methods: {
     handleFootprint(event){
-    event.preventDefault();
+    event.preventDefault(),
+      event.target.reset();
     const payload = {
       drive_car: this.drive_car,
       fly_plane: this.fly_plane,
@@ -138,6 +139,7 @@ export default {
       .then(footprint => {
         eventBus.$emit("footprint-added", footprint);
       });
+
     }
   }
 }
