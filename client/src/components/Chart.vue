@@ -9,9 +9,12 @@
 </template>
 
 <script>
+import {transportData} from '../helpers/TransportData';
+import {homeData} from '../helpers/HomeData';
+import {dietData} from '../helpers/DietData';
 export default {
   name: "chart",
-  props: ["footprints"],
+  props: ["footprints", "categories"],
   data () {
     return {
       title: '',
@@ -28,9 +31,9 @@ export default {
           text: 'Carbon Saved'
         },
         xAxis: {
-          categories: ["date", "date", "date", "date", "date", "date", "date", "date"],
+          categories: this.categories,
           title: {
-            text: "Date"
+            text: ""
           }
         },
         yAxis: {
@@ -49,16 +52,16 @@ export default {
    },
         series: [{
           name: "Transport",
-          data: [0, 0, 0, 2.4, 2.4, 2.4, 4, 4],
+          data: transportData(this.footprints),
           color: '#6fcd98'
         },
         {
           name: "Home",
-          data: [0, 0.3125, 0.3125, 1.8125, 1.8125, 2.2125, 2.257, 2.257]
+          data: homeData(this.footprints)
         },
       {
         name: "Diet",
-        data: [0, 0, 0, 0, 0, 0, 0.8, 0.8]
+        data: dietData(this.footprints)
       }]
       }
     }
@@ -67,17 +70,5 @@ export default {
 </script>
 
 <style scoped>
-input[type="color"]::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-#colorPicker {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  width: 30px;
-  height: 30px;
-}
-.numberInput {
-  width: 30px;
-}
+
 </style>
