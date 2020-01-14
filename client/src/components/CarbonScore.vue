@@ -8,10 +8,10 @@
       <p v-else>You don't own a car. Well done, you are preventing up to 4.6 metric tonnes of CO<sub>2</sub> per year.</p>
 
       <p v-if="this.footprint.fly_plane === true">You've flown recently. Did you know that aircraft produce around 90kg of CO<sub>2</sub> per hour? </p>
-      <p v-else>You haven't flown recently. Aviation contributes up 2% of the world's greenhouse gases. You are making a difference.</p>
+      <p v-else>You haven't flown recently. Aviation contributes up to 2% of the world's greenhouse gases. You are making a difference.</p>
 
       <p v-if="this.footprint.renewable_energy === true">Your electricity is from renewable sources. By 2050, renewables can reduce carbon emissions by up to 70%. Every little helps. </p>
-      <p v-else>Your electricity is from fossil fuels.Fossil fuels are for fools.</p>
+      <p v-else>Your electricity is from fossil fuels. Fossil fuels are for fools.</p>
 
       <p v-if="this.footprint.vegan === true">You have a vegan diet. Your carbon footprint from food is up to 73% smaller than that of a meat and dairy consumer.</p>
       <p v-else>You don't have a vegan diet. Research at the University of Oxford has found that a plant based diet could reduce your carbon footprint from food by up to 73%.</p>
@@ -22,11 +22,11 @@
       <p v-if="this.footprint.tumble_dryer === true">You use a tumble dryer. If everyone switched to hang drying their washing, it would save over 1 000 000 tonnes of CO<sub>2</sub> per year.</p>
       <p v-else>You hang-dry your clothes. You are burning more calories, but emitting far fewer CO<sub>2</sub> molecules than a tumble drying wastrel. </p>
 
-      <p v-if="this.footprint.recycle === true">You recycle your household waste.</p>
-      <p v-else>You don't recycle.</p>
+      <p v-if="this.footprint.recycle === true">You recycle your household waste. Recycling and composting is cool. You are too.</p>
+      <p v-else>You don't recycle. You would be cooler if you recycyled more and composted your food waste. (Recycled aluminium cans use 1/12th of the energy of a newly mined and manufactured one.)</p>
 
       <p v-if="this.footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting. This has reduced your carbon footprint for lighting by up to 75%. </p>
-      <p v-else>You have standard lightbulbs. You are using up to six times more energy on lighting than you need to. </p>
+      <p v-else>You have standard lightbulbs. You are using up to six times more energy on lighting than you need to. Not very enlightened habits. </p>
     </div>
     </div>
     <div class="yourscore">
