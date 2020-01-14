@@ -2,35 +2,36 @@
   <div class="component">
 
     <div class="footprint">
-      <p v-if="this.footprint.drive_car === true">You drive a car</p>
-      <p v-else>You don't own a car<p>
+      <div class="wrapper">
+        <div class="sentences>"
+      <p v-if="this.footprint.drive_car === true">You drive a car. By driving your car on a regular basis, you are contributing up to 4.6 metric tonnes of CO<sub>2</sub> into the atmosphere.</p>
+      <p v-else>You don't own a car. Well done, you are preventing up to 4.6 metric tonnes of CO<sub>2</sub> per year.</p>
 
-      <p v-if="this.footprint.fly_plane === true">You've flown recently</p>
-      <p v-else>You haven't flown recently</p>
+      <p v-if="this.footprint.fly_plane === true">You've flown recently. Did you know that aircraft produce around 90kg of CO<sub>2</sub> per hour? </p>
+      <p v-else>You haven't flown recently. Aviation contributes up 2% of the world's greenhouse gases. You are making a difference.</p>
 
-      <p v-if="this.footprint.renewable_energy === true">Your electricity is from renewable sources</p>
-      <p v-else>Your electricity is from fossil fuels</p>
+      <p v-if="this.footprint.renewable_energy === true">Your electricity is from renewable sources. By 2050, renewables can reduce carbon emissions by up to 70%. Every little helps. </p>
+      <p v-else>Your electricity is from fossil fuels.Fossil fuels are for fools.</p>
 
-      <p v-if="this.footprint.vegan === true">You have a vegan diet</p>
-      <p v-else>You don't have a vegan diet</p>
+      <p v-if="this.footprint.vegan === true">You have a vegan diet. Your carbon footprint from food is up to 73% smaller than that of a meat and dairy consumer.</p>
+      <p v-else>You don't have a vegan diet. Research at the University of Oxford has found that a plant based diet could reduce your carbon footprint from food by up to 73%.</p>
 
-      <p v-if="this.footprint.cold_water_wash === true">You wash clothes at low temperatures</p>
-      <p v-else>You wash clothes at hotter temperatures</p>
+      <p v-if="this.footprint.cold_water_wash === true">You wash clothes at low temperatures. Lower temperature cycles reduce your domestic carbon footprint exponentially. Clean and green.</p>
+      <p v-else>You wash clothes at hotter temperatures. Your carbon emissions grow exponentially at these settings. How low can you go?</p>
 
-      <p v-if="this.footprint.recycle === true">You recycle your household waste</p>
-      <p v-else>You don't recycle</p>
+      <p v-if="this.footprint.tumble_dryer === true">You use a tumble dryer. If everyone switched to hang drying their washing, it would save over 1 000 000 tonnes of CO<sub>2</sub> per year.</p>
+      <p v-else>You hang-dry your clothes. You are burning more calories, but emitting far fewer CO<sub>2</sub> molecules than a tumble drying wastrel. </p>
 
-      <p v-if="this.footprint.tumble_dryer === true">You use a tumble dryer</p>
-      <p v-else>You hang-dry your clothes</p>
+      <p v-if="this.footprint.recycle === true">You recycle your household waste.</p>
+      <p v-else>You don't recycle.</p>
 
-      <p v-if="this.footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting</p>
-      <p v-else>You have standard lightbulbs</p>
-
+      <p v-if="this.footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting. This has reduced your carbon footprint for lighting by up to 75%. </p>
+      <p v-else>You have standard lightbulbs. You are using up to six times more energy on lighting than you need to. </p>
+    </div>
+    </div>
+    <div class="yourscore">
       <p>Your score was {{callCalculator(footprint)}} Thunbergs!</p>
-
-      <p>This carbon footprint is from {{footprint.timestamp}}</p>
-
-
+    </div>
       <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
 
     </div>
@@ -92,4 +93,34 @@ button {
   margin-left: auto;
   text-align: center;
 }
+.wrapper {
+  /* display: flex; */
+
+}
+/* .yourscore {
+  display: flex;
+} */
+button {
+    background-color: rgb(102, 128, 127);
+    border: 2px solid black;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 8px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  .grid-item {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+
+
+
+
 </style>
