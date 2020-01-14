@@ -3,14 +3,14 @@
     <h2>How do you compare to the national average?</h2>
     <p>The average person in the UK produces 10 tonnes of carbon per year.</p>
     <div class="average">
+    <img src="https://www.biography.com/.image/t_share/MTY4MDk3MDc5NjQ0NjYxMDA5/greta-thunberg-looks-on-during-a-meeting-in-the-garden-of-the-hotel-de-lassay-ahead-of-a-visit-of-the-french-national-assembly-in-paris-photo-credit-should-read-lionel-bonaventureafp-via-getty-imagesj.jpg" alt="happy greta">
+    <img src="https://www.biography.com/.image/t_share/MTY4MDk3MDc5NjQ0NjYxMDA5/greta-thunberg-looks-on-during-a-meeting-in-the-garden-of-the-hotel-de-lassay-ahead-of-a-visit-of-the-french-national-assembly-in-paris-photo-credit-should-read-lionel-bonaventureafp-via-getty-imagesj.jpg" alt="happy greta">
     <p>The national average score is 2 Thunbergs.</p>
-    <img src="https://www.biography.com/.image/t_share/MTY4MDk3MDc5NjQ0NjYxMDA5/greta-thunberg-looks-on-during-a-meeting-in-the-garden-of-the-hotel-de-lassay-ahead-of-a-visit-of-the-french-national-assembly-in-paris-photo-credit-should-read-lionel-bonaventureafp-via-getty-imagesj.jpg" alt="happy greta">
-    <img src="https://www.biography.com/.image/t_share/MTY4MDk3MDc5NjQ0NjYxMDA5/greta-thunberg-looks-on-during-a-meeting-in-the-garden-of-the-hotel-de-lassay-ahead-of-a-visit-of-the-french-national-assembly-in-paris-photo-credit-should-read-lionel-bonaventureafp-via-getty-imagesj.jpg" alt="happy greta">
     </div>
     <br>
     <div class="your-score">
-    <p>Your score is {{score}} Thunbergs.</p>
     <img v-for="image in this.score" src="https://www.biography.com/.image/t_share/MTY4MDk3MDc5NjQ0NjYxMDA5/greta-thunberg-looks-on-during-a-meeting-in-the-garden-of-the-hotel-de-lassay-ahead-of-a-visit-of-the-french-national-assembly-in-paris-photo-credit-should-read-lionel-bonaventureafp-via-getty-imagesj.jpg" alt="happy greta">
+    <p>Your score is {{score}} Thunbergs.</p>
     </div>
     <br>
     <button v-on:click="showHistory">Show My Carbon History</button>
@@ -48,6 +48,8 @@
   img {
     height: 50px;
     width: 50px;
+    margin: 3px;
+    border: 2px solid black;
   }
   .average {
     display: flex;
