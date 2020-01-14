@@ -11,7 +11,7 @@ db.footprint.insertMany([
     recycle: true,
     tumble_dryer: false,
     energy_saving_lightbulbs: false,
-    timestamp: "November 21st 2018, 14:52 a'"
+    timestamp: "November 21st 2018, 14:52 am"
   },
   {
     drive_car: false,
@@ -22,7 +22,7 @@ db.footprint.insertMany([
     recycle: true,
     tumble_dryer: false,
     energy_saving_lightbulbs: true,
-    timestamp: "December 14th 2018, 09:15 a'"
+    timestamp: "December 14th 2018, 09:15 am"
   },
   {
     drive_car: true,
@@ -33,7 +33,7 @@ db.footprint.insertMany([
     recycle: true,
     tumble_dryer: false,
     energy_saving_lightbulbs: true,
-    timestamp: "January 2nd 2019, 17:20 p'"
+    timestamp: "January 2nd 2019, 17:20 pm"
   },
   {
     drive_car: false,
@@ -44,6 +44,6 @@ db.footprint.insertMany([
     recycle: true,
     tumble_dryer: false,
     energy_saving_lightbulbs: true,
-    timestamp: "January 12th 2019, 11:40 a'"
+    timestamp: "January 12th 2019, 11:40 am"
   }
 ]);
