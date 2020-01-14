@@ -1,6 +1,5 @@
 const express = require('express');
 const ObjectId = require('mongodb').ObjectID;
-const moment = require('moment').ObjectID;
 
 const createRouter = function (collection) {
 
