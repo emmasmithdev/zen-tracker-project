@@ -29,9 +29,13 @@
 
           <p v-if="this.footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting. This has reduced your carbon footprint for lighting by up to 75%. </p>
           <p v-else>You have standard lightbulbs. You are using up to six times more energy on lighting than you need to. Not very enlightened habits. </p>
+
+          <p>You saved this carbon footprint on {{this.footprint.timestamp}}</p>
+        </div>
     </div>
-    </div>
-      <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
+    <button v-on:click="previousFootprint()">Previous</button>
+    <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
+    <button v-on:click="nextFootprint()">Next</button>
   </div>
 </template>
 
@@ -45,11 +49,6 @@ export default {
   name: "carbon-footprint",
   props: ['footprint'],
 
-  filters: {
-    format(value){
-			return new Date(value).toLocaleString().substring(0, 10);
-    }},
-
   methods: {
     deleteFootprint(id) {
       CarbonService.deleteFootprint(id)
@@ -57,7 +56,10 @@ export default {
     )},
     callCalculator(footprint) {
       return calculator(footprint);
-    }
+    },
+    previousFootprint(){ eventBus.$emit('previous-clicked')},
+
+    nextFootprint(){eventBus.$emit('next-clicked')}
 
   }
 } //End of export
