@@ -25,5 +25,5 @@ export const calculator = function(footprint){
     if (footprint.energy_saving_lightbulbs === true){
       score += 0.1;
     }
-    return Math.floor(score)
+    return Math.round(score)
   };
