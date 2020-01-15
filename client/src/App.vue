@@ -27,12 +27,14 @@
     data () {
       return {
         footprints: [],
-        carbonHistory: false
+        carbonHistory: false,
+        currentFootprint: -1
       }
   },
   computed: {
     footprint: function(){
-      return this.footprints[this.footprints.length -1];
+
+      return this.footprints[this.footprints.length + this.currentFootprint];
     },
     score: function(){
       return calculator(this.footprint)
@@ -59,11 +61,16 @@ components: {
        eventBus.$on('footprint-deleted', id => {
          const index = this.footprints.findIndex(footprint => footprint._id === id);
          this.footprints.splice(index, 1);
-       })
+       });
        eventBus.$on('most-recent-footprint', (footprint) => {
          this.footprint = footprint
-       })
+       });
        eventBus.$on('show-history', (showHistory) => this.carbonHistory = showHistory);
+
+       eventBus.$on('previous-clicked', () => {this.currentFootprint -= 1});
+
+       eventBus.$on('next-clicked', () => {this.currentFootprint += 1});
+
      },
      methods: {
        fetchData(){
