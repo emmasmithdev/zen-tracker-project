@@ -132,7 +132,7 @@ export default {
       recycle: this.recycle,
       tumble_dryer: this.tumble_dryer,
       energy_saving_lightbulbs: this.energy_saving_lightbulbs,
-      timestamp: moment().format('MMMM Do YYYY, h:mm:ss a')
+      timestamp: moment().format('MMMM Do YYYY')
       };
 
       CarbonService.postFootprint(payload)
