@@ -45,11 +45,6 @@ export default {
   name: "carbon-footprint",
   props: ['footprint'],
 
-  filters: {
-    format(value){
-			return new Date(value).toLocaleString().substring(0, 10);
-    }},
-
   methods: {
     deleteFootprint(id) {
       CarbonService.deleteFootprint(id)
@@ -85,9 +80,6 @@ button {
   margin-left: auto;
   text-align: center;
 }
-/* .wrapper {
-  display: flex;
-} */
 
 button {
     background-color: rgb(102, 128, 127);
