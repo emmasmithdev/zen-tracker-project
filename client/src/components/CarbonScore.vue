@@ -30,12 +30,14 @@
           <p v-if="this.footprint.energy_saving_lightbulbs === true">Your home is lit with energy-efficient lighting. This has reduced your carbon footprint for lighting by up to 75%. </p>
           <p v-else>You have standard lightbulbs. You are using up to six times more energy on lighting than you need to. Not very enlightened habits. </p>
 
-          <p>You saved this carbon footprint on {{this.footprint.timestamp}}</p>
+          <p><strong>You saved this carbon footprint on {{this.footprint.timestamp}}</strong></p>
         </div>
     </div>
-    <button v-on:click="previousFootprint()">Previous</button>
-    <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
-    <button v-on:click="nextFootprint()">Next</button>
+    <div class="buttons">
+      <button v-on:click="previousFootprint()">Previous</button>
+      <button v-on:click="deleteFootprint(footprint._id)">Delete this Footprint</button>
+      <button v-on:click="nextFootprint()">Next</button>
+    </div>
   </div>
 </template>
 
@@ -114,6 +116,9 @@ button {
     border: 2px solid black;
   }
   .yourscore {
+    display: flex;
+  }
+  .buttons {
     display: flex;
   }
 
