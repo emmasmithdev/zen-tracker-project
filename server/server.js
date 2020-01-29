@@ -3,7 +3,7 @@ const parser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const cors = require('cors');
 const createRouter = require('./helpers/create_router.js');
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 const app = express();
 app.use(parser.json());
