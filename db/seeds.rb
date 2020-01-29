@@ -3,7 +3,6 @@ require_relative('../models/country.rb')
 require_relative('../models/city.rb')
 require_relative('../models/yoga.rb')
 require_relative('../models/yoga_experience.rb')
-require('pry')
 
 YogaExperience.delete_all
 City.delete_all
@@ -137,6 +136,3 @@ yoga_experience5.save
 yoga_experience6.save
 yoga_experience7.save
 yoga_experience8.save
-
-binding.pry
-nil

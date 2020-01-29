@@ -1,7 +1,6 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 require_relative('../models/yoga.rb')
-also_reload('../models/*')
 
 get '/yogas' do
   @yogas = Yoga.all

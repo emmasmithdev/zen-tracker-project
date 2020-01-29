@@ -1,7 +1,6 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 require_relative('../models/continent.rb')
-also_reload('../models/*')
 
 get '/continents' do
   @continents = Continent.all

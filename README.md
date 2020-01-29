@@ -22,7 +22,7 @@ Enlightenment is just around the corner...
 
 To run this app:
 1. Create a psql database named zen_tracker and run the following command:
-psql -d zen_tracker -f zen_tracker.sql
+psql -d zen_tracker -f db/zen_tracker.sql
 2. Run the file db/seeds.rb
 3. Run the file controller.rb
 4. Go to localhost:4567 in your browser

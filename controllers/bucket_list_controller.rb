@@ -1,11 +1,10 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 require_relative('../models/continent.rb')
 require_relative('../models/country.rb')
 require_relative('../models/city.rb')
 require_relative('../models/yoga.rb')
 require_relative('../models/yoga_experience.rb')
-also_reload('../models/*')
 
 get '/bucket-list' do
   @continents = Continent.all
