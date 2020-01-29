@@ -3,6 +3,7 @@ const parser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const cors = require('cors');
 const createRouter = require('./helpers/create_router.js');
+const port = process.env.PORT || 3000
 
 const app = express();
 app.use(parser.json());
@@ -16,6 +17,9 @@ MongoClient.connect('mongodb://localhost:27017')
   app.use('/api/footprint', carbonRouter);
 });
 
-app.listen(3000, function () {
-  console.log(`Listening on port ${ this.address().port }`);
+app.listen(port, function () {
+  console.log(`Server started on port`, port);
 });
+
+
+// ${ this.address().port }
