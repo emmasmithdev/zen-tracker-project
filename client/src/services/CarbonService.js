@@ -1,4 +1,4 @@
-const baseURL = 'https://arcane-peak-53020.herokuapp.com/api/footprint'
+const baseURL = 'https://arcane-peak-53020.herokuapp.com/api/heroku_1kf5x7pr/footprint'
 
 export default {
   getFootprints() {
